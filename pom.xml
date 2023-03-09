@@ -34,7 +34,17 @@
     		<artifactId>rest-assured</artifactId>
     		<scope>test</scope>
 		</dependency>
-		
+		<dependency>
+  			<groupId>junit</groupId>
+  			<artifactId>junit</artifactId>
+  			<version>4.13.2</version>
+ 			<scope>test</scope>
+		</dependency>
+    	<dependency>
+    		<groupId>io.rest-assured</groupId>
+   			 <artifactId>json-path</artifactId>
+    		<scope>test</scope>
+		</dependency>
 		<dependency>
    			 <groupId>io.github.cdimascio</groupId>
    			 <artifactId>dotenv-java</artifactId>
@@ -62,19 +72,18 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-
 		<dependency>
 			<groupId>org.json</groupId>
 			<artifactId>json</artifactId>
 			<version>20210307</version>
 		</dependency>
 		<dependency>
-    <groupId>com.github.tomakehurst</groupId>
-    <artifactId>wiremock-jre8</artifactId>
-    <version>2.29.1</version>
-    <scope>test</scope>
-</dependency>
-
+    		<groupId>com.github.tomakehurst</groupId>
+   			 <artifactId>wiremock-jre8</artifactId>
+   			 <version>2.29.1</version>
+   			 <scope>test</scope>
+	   </dependency>
+	  
 		<dependency>
 			<groupId>javax.validation</groupId>
 			<artifactId>validation-api</artifactId>
