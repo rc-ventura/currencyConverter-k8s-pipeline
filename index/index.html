@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="conversor.js"></script>
+    
+    <title>Conversor de Pares de Moeda</title>
+</head>
+<body>
+<form>
+  <label for="from">De:</label>
+  <select id="from" name="from">
+    <option value="USD">USD</option>
+    <option value="EUR">EUR</option>
+    <option value="BRL">BRL</option>
+    <!-- adicione outras opções de moeda aqui -->
+  </select>
+
+  <label for="to">Para:</label>
+  <select id="to" name="to">
+    <option value="USD">USD</option>
+    <option value="EUR">EUR</option>
+    <option value="BRL">BRL</option>
+    <!-- adicione outras opções de moeda aqui -->
+  </select>
+
+  <label for="amount">Valor:</label>
+  <input type="number" id="amount" name="amount" value="100">
+
+  <button type="submit" id="converter-btn">Converter</button>
+</form>
+
+<div id="result"></div>
+
+</body>
+</html>
