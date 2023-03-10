@@ -1,16 +1,26 @@
 <div align="center">
+  
+![Converta-me_cover](https://user-images.githubusercontent.com/87483916/224345890-7077b778-878c-42cb-9292-2590de454519.png)
 
-# CurrencyConverter-App
-#### Conversor de pares de moeda que consulta uma API LAYER retorna o câmbio em tempo real com a conversão.
+
 
 <img src= "./front/assets/currency_theme_white-trim.png" width="850" height="300" alt=" rosto de uma presidente americano em uma moeda">
 
 </div>
 
+## :anger: Descrição
 
-# Título do projeto
+Conversor de pares de moeda que consulta uma API LAYER retorna o câmbio em tempo real com a conversão.
 
-Um parágrafo da descrição do projeto vai aqui
+
+## :anger: Status do Projeto
+![→_-em desenvolvimento-green](https://user-images.githubusercontent.com/87483916/224333868-804e4712-ecb7-492b-8c47-6c6bff8e3b7a.svg)
+
+
+## :airplane: Roadmap
+
+- [ ] Esta é uma caixa de seleção vazia.
+- [x] Esta é uma caixa de seleção selecionada.
 
 ## 🚀 Começando
 
@@ -68,14 +78,22 @@ Dar exemplos
 
 Adicione notas adicionais sobre como implantar isso em um sistema ativo
 
-## 🛠️ Construído com
+## 🛠️ Tecnologias
 
-Mencione as ferramentas que você usou para criar seu projeto
+ <div  style="display: inline-block" >
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - O framework web usado
-* [Maven](https://maven.apache.org/) - Gerente de Dependência
-* [ROME](https://rometools.github.io/rome/) - Usada para gerar RSS
-
+ <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" width="100"  /> 
+ <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" width="100"  />          
+ <img src= "https://user-images.githubusercontent.com/87483916/224313415-17511f48-87e4-4d9d-98ed-01daba701270.png" width="100"/>  
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"width="100" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-plain-wordmark.svg"width="100" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg"width="100" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"width="100" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg"width="100"  />
+  <img src= "https://user-images.githubusercontent.com/87483916/224327989-cbe927a8-c35c-48e1-99e2-6baadec00d9b.svg" width="100">
+ 
+</div>
+  
 ## 🖇️ Colaborando
 
 Por favor, leia o [COLABORACAO.md](https://gist.github.com/usuario/linkParaInfoSobreContribuicoes) para obter detalhes sobre o nosso código de conduta e o processo para nos enviar pedidos de solicitação.
