@@ -52,9 +52,25 @@ Termine com um exemplo de como obter dados do sistema ou como usá-los para uma 
 
 ## :scroll: Funcionalidades
 
+<Br>
+
 * Conversor de câmbio entre um par de moedas.
 
 https://user-images.githubusercontent.com/87483916/224521177-28dfcd7d-a7f8-4b07-8165-008f50befc2d.mp4
+
+<Br>
+<Br>
+
+* Salvando transações de conversão no banco de dados.
+
+
+
+
+https://user-images.githubusercontent.com/87483916/224570140-59ec3d15-2057-4b94-b85e-2c733daf2f98.mp4
+
+
+
+
 
 
 
@@ -67,6 +83,7 @@ https://user-images.githubusercontent.com/87483916/224521177-28dfcd7d-a7f8-4b07-
  - [x] Testes unitários com Junit e Mockito da Main Feature.
  - [x] Teste de integração da API com a biblioteca restAssured.
  - [ ] Testes com cobertura de 80%.
+ - [x] Ajustes na UI.
  - [x] Feature: Método para salvar toda transação de conversão no banco de ddaos.
  - [ ] Teste para método salvar toda transação no banco de dados.
  - [ ] Teste de integração de todas as features.
