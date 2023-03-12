@@ -63,7 +63,7 @@ https://user-images.githubusercontent.com/87483916/224521177-28dfcd7d-a7f8-4b07-
  - [x] Main Feature: Método para conversão de pares de moeda. 
  - [x] Feature: Interface do usuário em Html/Css.
  - [x] Feature: Link entre backend e frontend com JQuery.
- - [ ] Feature: Controlador de Exceptions
+ - [x] Feature: Controlador de Exceptions
  - [x] Testes unitários com Junit e Mockito da Main Feature.
  - [x] Teste de integração da API com a biblioteca restAssured.
  - [ ] Testes com cobertura de 80%.
@@ -73,7 +73,9 @@ https://user-images.githubusercontent.com/87483916/224521177-28dfcd7d-a7f8-4b07-
  - [ ] Documentação da API com Swagger.
  - [ ] Deploy da aplicação em ambiente de teste com Docker.
  - [ ] Deploy da aplicação em ambiente de desenvolvimento em um servidor remoto.
- - [ ] Build automatizado com Git Actions. 
+ - [ ] Pipeline CI/CD: Build automatizado com Git Actions e imagem postada no DockerHub.
+ - [ ] Pipeline CI/CD: Deploy automatizado com Ansible em um servidor remoto.
+ - [ ] SRE: Observabilidade da aplicação: Métricas e Monitoramento.
 
 
 
