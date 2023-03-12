@@ -1,13 +1,19 @@
 package com.oracle.next.one.Services;
 
 import java.math.BigDecimal;
+import java.time.LocalDateTime;
 import java.util.Currency;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.oracle.next.one.Models.CurrencyConverter;
+import com.oracle.next.one.Models.Transaction;
+import com.oracle.next.one.Repositories.TransactionRepository;
 
 @Service
+@Transactional
 public class CurrencyConverterService {
 	
 	private final CurrencyConverter currencyConverter;
@@ -15,9 +21,12 @@ public class CurrencyConverterService {
     public CurrencyConverterService(CurrencyConverter currencyConverter) {
         this.currencyConverter = currencyConverter;
     }
+    
+    
 
     /**
-     * Método responsável por realizar a conversão de moedas utilizando a API da Currency Layer.
+     * Método responsável por realizar a conversão de moedas utilizando a API da Currency Layer e salvar no banco de dados.
+     * 
      *
      * @param from   Moeda de origem.
      * @param to     Moeda de destino.
@@ -26,6 +35,9 @@ public class CurrencyConverterService {
      */
     public BigDecimal convertCurrency(Currency from, Currency to, BigDecimal amount) {
         BigDecimal conversionRate = currencyConverter.convert(from, to, amount);
+        
+       
+        
         return amount.multiply(conversionRate);
     }
 
