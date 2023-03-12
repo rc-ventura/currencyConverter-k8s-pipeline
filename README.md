@@ -8,19 +8,15 @@
 
 </div>
 
-## :anger: Descrição
+## :8ball: Descrição
 
-Conversor de pares de moeda que consulta uma API LAYER retorna o câmbio em tempo real com a conversão.
+Conversor de pares de moeda que faz uma consulta em uma API LAYER retorna o câmbio em tempo real e faz a conversão dos respectivos pares.
 
 
 ## :anger: Status do Projeto
+
 ![→_-em desenvolvimento-green](https://user-images.githubusercontent.com/87483916/224333868-804e4712-ecb7-492b-8c47-6c6bff8e3b7a.svg)
 
-
-## :airplane: Roadmap
-
-- [ ] Esta é uma caixa de seleção vazia.
-- [x] Esta é uma caixa de seleção selecionada.
 
 ## 🚀 Começando
 
@@ -35,7 +31,6 @@ De que coisas você precisa para instalar o software e como instalá-lo?
 ```
 Dar exemplos
 ```
-
 ### 🔧 Instalação
 
 Uma série de exemplos passo-a-passo que informam o que você deve executar para ter um ambiente de desenvolvimento em execução.
@@ -53,6 +48,30 @@ Até finalizar
 ```
 
 Termine com um exemplo de como obter dados do sistema ou como usá-los para uma pequena demonstração.
+
+
+## :scroll: Funcionalidades
+
+* Conversor de câmbio entre um par de moedas.
+* 
+
+## :airplane: Roadmap
+
+ - [x] Main Feature: Método para conversão de pares de moeda. 
+ - [x] Feature: Interface do usuário em Html/Css.
+ - [x] Feature: Link entre backend e frontend com JQuery.
+ - [ ] Feature: Controlador de Exceptions
+ - [x] Testes unitários com Junit e Mockito da Main Feature.
+ - [x] Teste de integração da API com a biblioteca restAssured.
+ - [ ] Testes com cobertura de 80%.
+ - [x] Feature: Método para salvar toda transação de conversão no banco de ddaos.
+ - [ ] Teste para método salvar toda transação no banco de dados.
+ - [ ] Teste de integração de todas as features.
+ - [ ] Documentação da API com Swagger.
+ - [ ] Deploy da aplicação em ambiente de teste com Docker.
+ - [ ] Build automatizado com Git Actions. 
+
+
 
 ## ⚙️ Executando os testes
 
@@ -117,11 +136,8 @@ Este projeto está sob a licença (sua licença) - veja o arquivo [LICENSE.md](h
 
 ## 🎁 Expressões de gratidão
 
-* Conte a outras pessoas sobre este projeto 📢;
-* Convide alguém da equipe para uma cerveja 🍺;
-* Um agradecimento publicamente 🫂;
-* etc.
+
 
 
 ---
-⌨️ com ❤️ por [Armstrong Lohãns](https://gist.github.com/lohhans) 😊
+⌨️ com ❤️ por [Rafael Ventura](https://gist.github.com/rc-ventura) 😊
