@@ -53,7 +53,10 @@ Termine com um exemplo de como obter dados do sistema ou como usá-los para uma 
 ## :scroll: Funcionalidades
 
 * Conversor de câmbio entre um par de moedas.
-* 
+
+https://user-images.githubusercontent.com/87483916/224521177-28dfcd7d-a7f8-4b07-8165-008f50befc2d.mp4
+
+
 
 ## :airplane: Roadmap
 
@@ -69,6 +72,7 @@ Termine com um exemplo de como obter dados do sistema ou como usá-los para uma 
  - [ ] Teste de integração de todas as features.
  - [ ] Documentação da API com Swagger.
  - [ ] Deploy da aplicação em ambiente de teste com Docker.
+ - [ ] Deploy da aplicação em ambiente de desenvolvimento em um servidor remoto.
  - [ ] Build automatizado com Git Actions. 
 
 
