@@ -26,28 +26,62 @@ Consulte **[Implantação](#-implanta%C3%A7%C3%A3o)** para saber como implantar 
 
 ### 📋 Pré-requisitos
 
-De que coisas você precisa para instalar o software e como instalá-lo?
+ ##### <a href="https://www.oracle.com/br/java/technologies/downloads"> * Maven </a>
+ ##### <a href="https://www.oracle.com/br/java/technologies/downloads"> * Eclipse ou outra IDE </a>
+ ##### <a href="https://www.oracle.com/br/java/technologies/downloads"> * JDK 11 ou superior </a>
+ ##### <a href="https://www.oracle.com/br/java/technologies/downloads"> * MySQL Workbench </a>
 
-```
-Dar exemplos
-```
+
 ### 🔧 Instalação
 
 Uma série de exemplos passo-a-passo que informam o que você deve executar para ter um ambiente de desenvolvimento em execução.
 
-Diga como essa etapa será:
+#### :anger: Pelo Git Bash:
+<hr>
+
+1. Abra Git Bash. 
+2. Altere o diretório de trabalho atual para o local em que deseja ter o diretório clonado. 
+3. Digite git clone e cole a URL já copiada.
 
 ```
-Dar exemplos
+$ git clone https://github.com/rc-ventura/Social-Media-System
 ```
-
-E repita:
-
+4. Pressione **ENTER** para criar seu clone local.
 ```
-Até finalizar
+$ git clone https://github.com/rc-ventura/Social-Media-System
+> Cloning into `Spoon-Knife`...
+> remote: Counting objects: 10, done.
+> remote: Compressing objects: 100% (8/8), done.
+> remove: Total 10 (delta 1), reused 10 (delta 1)
+> Unpacking objects: 100% (10/10), done.
 ```
+5. Abra sua o Eclipse
+6. Selecione -> File -> Open Projects From File System -> Selecione o caminho da pasta onde fez o download.
+7. Pressione **RUN** no Eclipe para rodar a aplicação ou **Ctrl + F11**
 
-Termine com um exemplo de como obter dados do sistema ou como usá-los para uma pequena demonstração.
+
+#### :anger: Por Download do arquivo .zip:
+<hr>
+
+1. No GitHub.com, navegue até a página principal do repositório. 
+2. Acima da lista de arquivos, clique em  **Código** ou **Code**.
+3. Selecione a opção **Download .zip**
+5. Salve em uma máquina local.
+5. Abra sua o Eclipse
+6. Selecione -> File -> Open Projects From File System -> Selecione o caminho da pasta onde fez o download.
+7. Pressione **RUN** no Eclipe para rodar a aplicação ou **Ctrl + F11**
+
+
+#### :anger: Executando com o Maven:
+<hr>
+
+1. Clona ou faça download da aplicação.
+2. Abra o prompt de comando ou terminal.
+3. Selecione o caminho da pasta onde fez download.
+5. Execute o seguinte comando:
+ ```
+ mvn spring-boot:run
+ ```
 
 
 ## :scroll: Funcionalidades
@@ -63,14 +97,7 @@ https://user-images.githubusercontent.com/87483916/224521177-28dfcd7d-a7f8-4b07-
 
 * Salvando transações de conversão no banco de dados.
 
-
-
-
 https://user-images.githubusercontent.com/87483916/224570140-59ec3d15-2057-4b94-b85e-2c733daf2f98.mp4
-
-
-
-
 
 
 
@@ -85,7 +112,7 @@ https://user-images.githubusercontent.com/87483916/224570140-59ec3d15-2057-4b94-
  - [ ] Testes com cobertura de 80%.
  - [x] Ajustes na UI.
  - [x] Feature: Método para salvar toda transação de conversão no banco de ddaos.
- - [ ] Teste para método salvar toda transação no banco de dados.
+ - [x] Teste para método salvar toda transação no banco de dados.
  - [ ] Teste de integração de todas as features.
  - [ ] Documentação da API com Swagger.
  - [ ] Deploy da aplicação em ambiente de teste com Docker.
@@ -98,7 +125,9 @@ https://user-images.githubusercontent.com/87483916/224570140-59ec3d15-2057-4b94-
 
 ## ⚙️ Executando os testes
 
-Explicar como executar os testes automatizados para este sistema.
+ ![----_-Em Construção  ](https://user-images.githubusercontent.com/87483916/224585025-2396fe38-40fa-4b2d-8a44-3d9b753f88d0.svg)
+
+<!-- Explicar como executar os testes automatizados para este sistema.
 
 ### 🔩 Analise os testes de ponta a ponta
 
@@ -115,10 +144,11 @@ Explique que eles verificam esses testes e porquê.
 ```
 Dar exemplos
 ```
-
+-->
 ## 📦 Implantação
+  
+![----_-Em Construção  ](https://user-images.githubusercontent.com/87483916/224585085-61045e0a-cbe7-48cb-b29a-e6a89c4cf4e7.svg)
 
-Adicione notas adicionais sobre como implantar isso em um sistema ativo
 
 ## 🛠️ Tecnologias
 
@@ -142,14 +172,13 @@ Por favor, leia o [COLABORACAO.md](https://gist.github.com/usuario/linkParaInfoS
 
 ## 📌 Versão
 
-Nós usamos [SemVer](http://semver.org/) para controle de versão. Para as versões disponíveis, observe as [tags neste repositório](https://github.com/suas/tags/do/projeto). 
+ Para as versões disponíveis, observe as [tags neste repositório](https://github.com/suas/tags/do/projeto). 
 
 ## ✒️ Autores
 
 Mencione todos aqueles que ajudaram a levantar o projeto desde o seu início
 
-* **Um desenvolvedor** - *Trabalho Inicial* - [umdesenvolvedor](https://github.com/linkParaPerfil)
-* **Fulano De Tal** - *Documentação* - [fulanodetal](https://github.com/linkParaPerfil)
+* **Rafael Ventura** - *Idealizador do projeto* - [Dev Ventura](https://github.com/rc-ventura)
 
 Você também pode ver a lista de todos os [colaboradores](https://github.com/usuario/projeto/colaboradores) que participaram deste projeto.
 
@@ -158,8 +187,6 @@ Você também pode ver a lista de todos os [colaboradores](https://github.com/us
 Este projeto está sob a licença (sua licença) - veja o arquivo [LICENSE.md](https://github.com/usuario/projeto/licenca) para detalhes.
 
 ## 🎁 Expressões de gratidão
-
-
 
 
 ---
