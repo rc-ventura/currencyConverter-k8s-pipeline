@@ -43,11 +43,11 @@ Consulte **[Implantação](#-implanta%C3%A7%C3%A3o)** para saber como implantar 
 3. Digite git clone e cole a URL já copiada.
 
 ```
-$ git clone https://github.com/rc-ventura/Social-Media-System
+$ git clone https://github.com/rc-ventura/CurrencyConverter-App
 ```
 4. Pressione **ENTER** para criar seu clone local.
 ```
-$ git clone https://github.com/rc-ventura/Social-Media-System
+$ git clone https://github.com/rc-ventura/CurrencyConverter-App
 > Cloning into `Spoon-Knife`...
 > remote: Counting objects: 10, done.
 > remote: Compressing objects: 100% (8/8), done.
