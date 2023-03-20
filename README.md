@@ -108,13 +108,15 @@ https://user-images.githubusercontent.com/87483916/224570140-59ec3d15-2057-4b94-
  - [x] Feature: Controlador de Exceptions
  - [x] Testes unitários com Junit e Mockito da Main Feature.
  - [x] Teste de integração da API com a biblioteca restAssured.
- - [ ] Testes com cobertura de 80%.
+ - [x] Testes com cobertura de 80%.
  - [x] Ajustes na UI.
  - [x] Feature: Método para salvar toda transação de conversão no banco de ddaos.
  - [x] Teste para método salvar toda transação no banco de dados.
  - [ ] Teste de integração de todas as features.
+ - [ ] Teste de carga em transações no banco de dados. 
+ - [ ] Teste de UI.
  - [ ] Documentação da API com Swagger.
- - [ ] Deploy da aplicação em ambiente de teste com Docker.
+ - [x] Deploy da aplicação em ambiente de teste com Docker.
  - [ ] Deploy da aplicação em ambiente de desenvolvimento em um servidor remoto.
  - [ ] Pipeline CI/CD: Build automatizado com Git Actions e imagem postada no DockerHub.
  - [ ] Pipeline CI/CD: Deploy automatizado com Ansible em um servidor remoto.
