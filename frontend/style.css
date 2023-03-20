@@ -1,0 +1,126 @@
+body {
+    background-image: url('./assets/currency_theme.png');
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 70vh;
+    
+  }
+  
+  form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px 10px 0 0 ;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+  }
+  
+  label {
+    display: block;
+    font-size: 1.5rem;
+    padding: 1rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  select,
+  input[type="number"],
+  button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-family: inherit;
+    color: #333;
+    background-color: #f2f2f2;
+    width: 120px;
+     border: 2px solid #f2f2f2; /* borda branca */
+    box-shadow: 0 0 10px 0 #000000; /* sombra preta */
+  }
+  
+  button {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    border: 2px solid #f2f2f2; /* borda branca */
+    box-shadow: 0 0 10px 0 #000000; /* sombra preta */
+    font-size: 1.2rem;
+  }
+  
+  button:hover {
+    background-color: #3e8e41;
+  }
+  
+    #result {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 0 auto;
+      max-width: 50rem;
+      padding: 21px;
+      background-color: #5cb85c;
+      border-radius: 0 0 10px 10px;
+      box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 20%);
+      box-shadow: 0 0 10px 0 #000000;
+      font-size: 1.5rem;
+      font-weight: bold;
+      width: 49.7rem;
+      flex-direction: row;
+      align-content: center;
+      align-items: center;
+      }
+        
+
+      
+      
+  
+/* Media queries para diferentes tamanhos de tela */
+@media (max-width: 767px) {
+    form {
+      padding: 10px;
+    }
+
+    #result {
+      max-width: 90%;
+      margin: 0 auto;
+      padding: 10px;
+    }
+    
+    input[type="number"] {
+      max-width: 200px;
+    }
+  }
+  
+  @media (min-width: 768px) and (max-width: 991px) {
+    form {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    #result {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    form {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    #result {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+  }  
+
+  
