@@ -7,6 +7,7 @@ import java.util.Currency;
 
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.stereotype.Component;
+import org.springframework.web.client.RestClientException;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
 
@@ -61,7 +62,8 @@ public class CurrencyConverter {
 	*/
 	
 	public BigDecimal convert(Currency from, Currency to, BigDecimal amount) {
-	    URI uri = UriComponentsBuilder.fromUriString(API_URL)
+	 try {
+		   URI uri = UriComponentsBuilder.fromUriString(API_URL)
 	            .queryParam("from", from.getCurrencyCode())
 	            .queryParam("to", to.getCurrencyCode())
 	            .queryParam("amount", amount)
@@ -69,11 +71,13 @@ public class CurrencyConverter {
 	            .build()
 	            .toUri();
 
-	    ConversionResponse response = restTemplate.getForObject(uri, ConversionResponse.class);
-	    System.out.println(response.getResult());
-	    return response.getResult();
+		 	ConversionResponse response = restTemplate.getForObject(uri, ConversionResponse.class);
+		 	System.out.println(response.getResult());
+		 	return response.getResult();
+	}catch(RestClientException e) {
+		throw new RuntimeException("Failed to convert currency", e);
 	}
-
+	}
 
 	/**
 	 * Classe interna responsável por representar a resposta da conversão de moedas da API.

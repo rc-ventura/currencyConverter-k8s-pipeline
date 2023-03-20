@@ -1,16 +1,12 @@
 package com.oracle.next.one.Services;
 
 import java.math.BigDecimal;
-import java.time.LocalDateTime;
 import java.util.Currency;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.oracle.next.one.Models.CurrencyConverter;
-import com.oracle.next.one.Models.Transaction;
-import com.oracle.next.one.Repositories.TransactionRepository;
 
 @Service
 @Transactional
