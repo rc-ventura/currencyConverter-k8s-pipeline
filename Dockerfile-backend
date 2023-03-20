@@ -1,0 +1,25 @@
+# Define a imagem base
+FROM openjdk:17-jdk-alpine
+
+LABEL mantainer="r.c_ventura@hotmail.com"
+
+# Define o diretório de trabalho onde serão copiados e construídos os arquivos
+WORKDIR /app
+
+# Copia o arquivo pom.xml para o diretório de trabalho
+COPY pom.xml .
+
+# Executa o comando mvn install para baixar as dependências do projeto e gerar o arquivo .jar
+RUN apk add --no-cache maven && mvn dependency:go-offline
+
+# Copia todos os arquivos do diretório atual para o diretório de trabalho
+COPY . .
+
+# Executa o comando mvn package para gerar o arquivo .jar do projeto
+RUN mvn clean package  -DskipTests
+
+# Copia o arquivo jar gerado para a pasta /app
+RUN cp target/CurrencyConverter-0.0.1-SNAPSHOT.jar .
+
+# Define o comando que será executado ao iniciar o contêiner
+CMD ["java", "-jar", "CurrencyConverter-0.0.1-SNAPSHOT.jar"]
