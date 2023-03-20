@@ -1,0 +1,101 @@
+version: '3.9'
+
+
+services:
+
+  # Container com a aplicação Java (backend)
+  backend:
+    image: currency-converter-backend
+    build: 
+      context:  .
+      dockerfile: Dockerfile-backend
+    
+    restart: always
+
+    ports:
+      - "8080:8080"
+
+    environment:
+      # Define o profile ativo do Spring
+      - SPRING_PROFILES_ACTIVE=dev
+    
+    # Define dependência do container do banco de dados
+    depends_on:
+      - db
+    
+    # Nome descritivo para o container
+    container_name: currency-converter-backend
+    
+    # Usa a rede mynetwork
+    networks:
+      - mynetwork
+    
+ 
+
+  # Container com o banco de dados MySQL
+  db:
+    image: mysql:8.0
+    restart: always
+
+    # Usa o plugin de autenticação nativo do MySQL e executa um script para liberação de conexões.
+
+    command: --default-authentication-plugin=mysql_native_password 
+
+
+    environment:
+      
+      # Define a url da conexão com o banco de dados
+      SPRING_DATASOURCE_URL: ${SPRING_DATASOURCE_URL}
+      # Define a senha do usuário root do MySQL
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      # Define que o usuário ROOT pode acessar o db de uma rede local
+      MYSQL_ROOT_HOST: ${MYSQL_ROOT_HOST}
+      # Define o nome da database
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      # Define um usuário para acesso e sua senha
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      
+    healthcheck: # Define um healthcheck para o serviço de banco de dados
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-pexample"] # Testa a conexão com o banco de dados usando mysqladmin
+      interval: 5s # Intervalo de tempo entre os testes de saúde
+      timeout: 10s # Tempo limite para o teste de saúde
+      retries: 5 # Número de tentativas de teste de saúde antes de considerar o serviço como inoperante
+
+    # Mapeia uma pasta no host para a persistência e passa um arquivo de configurações para o container
+    volumes:
+      - ./mysql_data:/var/lib/mysql
+     
+    
+    # Expõe a porta no host local e no container 
+    ports:
+      - 3307:3306
+  
+    # Usa a rede mynetwork
+    networks:
+      - mynetwork
+
+    container_name: currency-converter-db
+
+  frontend:
+    image: nginx:1.20.2
+    ports:
+      - "80:80"
+    volumes:
+      - ./frontend:/usr/share/nginx/html:ro
+
+    networks:
+     - mynetwork
+
+    depends_on:
+      - db
+      - backend
+
+    container_name: currency-converter-frontend
+
+
+volumes:
+ mysql_data:
+
+networks:
+  mynetwork:
