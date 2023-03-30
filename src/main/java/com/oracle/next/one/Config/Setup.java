@@ -1,4 +1,4 @@
-package com.oracle.next.one.Setup;
+package com.oracle.next.one.Config;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
@@ -13,7 +13,7 @@ import com.oracle.next.one.Models.Transaction;
 import com.oracle.next.one.Repositories.TransactionRepository;
 
 @Configuration
-@Profile("dev")
+@Profile("test")
 public class Setup implements CommandLineRunner {	
 	    
 	    @Autowired

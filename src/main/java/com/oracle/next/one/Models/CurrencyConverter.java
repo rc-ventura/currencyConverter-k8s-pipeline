@@ -11,12 +11,25 @@ import org.springframework.web.client.RestClientException;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
 
+import com.fasterxml.jackson.annotation.JsonGetter;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonSetter;
+
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.Parameter;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema.RequiredMode;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import io.swagger.v3.oas.annotations.tags.Tag;
+
 
 /**
 	 * Classe responsável por fazer a conversão de moedas utilizando a API da Currency Layer.
 	 */
 
 @Component
+@Tag(name = "Currency Converter", description = "Classe para conversão de moedas")
 public class CurrencyConverter {
 	    
 
@@ -52,6 +65,17 @@ public class CurrencyConverter {
 	 * @return Valor convertido.
 	 */
 	
+	@Operation(summary = "Realiza a conversão de moedas",
+			description = "Método responsável por realizar a conversão de moedas utilizando a API da Currency Layer.")
+	@ApiResponses(value = {
+			@ApiResponse(responseCode = "200", description = "Conversão realizada com sucesso"),
+			@ApiResponse(responseCode = "400", description = "Requisição inválida"),
+			@ApiResponse(responseCode = "401", description = "Não autorizado"),
+			@ApiResponse(responseCode = "403", description = "Proibido"),
+			@ApiResponse(responseCode = "404", description = "Não encontrado"),
+			@ApiResponse(responseCode = "500", description = "Erro interno do servidor")
+	})
+	
 	/**
 	* Constrói um objeto URI a partir da URL base e parâmetros de consulta fornecidos.
 	* Os parâmetros de consulta são adicionados à URL base como pares chave-valor.
@@ -61,8 +85,18 @@ public class CurrencyConverter {
 	* @return um objeto URI contendo a URL completa com parâmetros de consulta adicionados
 	*/
 	
-	public BigDecimal convert(Currency from, Currency to, BigDecimal amount) {
-	 try {
+	
+	public BigDecimal convert(
+			
+			@Parameter(description = "Moeda de origem", required = true, schema = @Schema(type = "string", example = "USD"))
+			Currency from,
+			@Parameter(description = "Moeda de destino", required = true, schema = @Schema(type = "string", example = "BRL"))
+			Currency to,
+			@Parameter(description = "Valor a ser convertido", required = true, schema = @Schema(type = "number", example = "100.00"))
+			BigDecimal amount) {
+			
+try  {
+				
 		   URI uri = UriComponentsBuilder.fromUriString(API_URL)
 	            .queryParam("from", from.getCurrencyCode())
 	            .queryParam("to", to.getCurrencyCode())
@@ -83,12 +117,34 @@ public class CurrencyConverter {
 	 * Classe interna responsável por representar a resposta da conversão de moedas da API.
 	 */
 	public static class ConversionResponse {
-	    private BigDecimal result;
+	    
+		 
+	    /**
+	     * Resultado da conversão de moedas.
+	     */
+		
+	    @Schema(description = "Valor convertido.", example = "125.23", requiredMode = RequiredMode.REQUIRED  )
+	    @JsonProperty("result")
+		private BigDecimal result;
+	    
+	    /**
+	     * Retorna o resultado da conversão de moedas.
+	     * 
+	     * @return Resultado da conversão de moedas.
+	     */
 
+	    @JsonGetter("result")
 	    public BigDecimal getResult() {
 	        return result;
 	    }
-
+	    
+	    /**
+	     * Define o resultado da conversão de moedas.
+	     * 
+	     * @param result Resultado da conversão de moedas.
+	     */
+	    
+	    @JsonSetter("result")
 	    public void setResult(BigDecimal result) {
 	        this.result = result;
 	    }
