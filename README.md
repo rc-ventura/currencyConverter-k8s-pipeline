@@ -115,11 +115,11 @@ https://user-images.githubusercontent.com/87483916/224570140-59ec3d15-2057-4b94-
  - [ ] Teste de integração de todas as features.
  - [ ] Teste de carga em transações no banco de dados. 
  - [ ] Teste de UI.
- - [ ] Documentação da API com Swagger.
+ - [ ] Docummnetação dos testes realizados
+ - [x] Documentação da API com Swagger.
  - [x] Deploy da aplicação em ambiente de teste com Docker.
  - [ ] Deploy da aplicação em ambiente de desenvolvimento em um servidor remoto.
- - [ ] Pipeline CI/CD: Build automatizado com Git Actions e imagem postada no DockerHub.
- - [ ] Pipeline CI/CD: Deploy automatizado com Ansible em um servidor remoto.
+ - [ ] Pipeline CI/CD
  - [ ] SRE: Observabilidade da aplicação: Métricas e Monitoramento.
 
 
