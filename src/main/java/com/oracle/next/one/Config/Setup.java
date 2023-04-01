@@ -13,7 +13,7 @@ import com.oracle.next.one.Models.Transaction;
 import com.oracle.next.one.Repositories.TransactionRepository;
 
 @Configuration
-@Profile("test")
+@Profile("dev")
 public class Setup implements CommandLineRunner {	
 	    
 	    @Autowired

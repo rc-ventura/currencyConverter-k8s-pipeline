@@ -85,6 +85,7 @@ public class CurrencyConverter {
 	* @return um objeto URI contendo a URL completa com parâmetros de consulta adicionados
 	*/
 	
+<<<<<<< HEAD
 	
 	public BigDecimal convert(
 			
@@ -97,6 +98,10 @@ public class CurrencyConverter {
 			
 try  {
 				
+=======
+	public BigDecimal convert(Currency from, Currency to, BigDecimal amount) {
+	 try {
+>>>>>>> c466e88ba819e8cf175840320dde08f0023db04d
 		   URI uri = UriComponentsBuilder.fromUriString(API_URL)
 	            .queryParam("from", from.getCurrencyCode())
 	            .queryParam("to", to.getCurrencyCode())

@@ -8,7 +8,10 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import java.math.BigDecimal;
 import java.util.Currency;
 
+<<<<<<< HEAD
 import org.junit.jupiter.api.DisplayName;
+=======
+>>>>>>> c466e88ba819e8cf175840320dde08f0023db04d
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -81,9 +84,12 @@ public class CurrencyConverterControllerTest {
         // verificação do resultado da conversão de moeda
         String content = result.getResponse().getContentAsString();
         BigDecimal convertedValue = new BigDecimal(content);
+<<<<<<< HEAD
         
        // Allure.step("Converted value is " + convertedValue);
 
+=======
+>>>>>>> c466e88ba819e8cf175840320dde08f0023db04d
         assertNotNull(convertedValue);
         assertTrue(convertedValue.compareTo(BigDecimal.ZERO) > 0);
     }
