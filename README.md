@@ -115,8 +115,8 @@ https://user-images.githubusercontent.com/87483916/224570140-59ec3d15-2057-4b94-
  - [ ] Teste de integração de todas as features.
  - [ ] Teste de carga em transações no banco de dados. 
  - [ ] Teste de UI.
- - [ ] Docummnetação dos testes realizados
- - [x] Documentação da API com Swagger.
+ - [ ] Documentação dos testes realizados.
+ - [x] Documentação da API com Swagger/OpenApi
  - [x] Deploy da aplicação em ambiente de teste com Docker.
  - [ ] Deploy da aplicação em ambiente de desenvolvimento em um servidor remoto.
  - [ ] Pipeline CI/CD
