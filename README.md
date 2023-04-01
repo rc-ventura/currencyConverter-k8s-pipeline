@@ -123,6 +123,10 @@ https://user-images.githubusercontent.com/87483916/224570140-59ec3d15-2057-4b94-
  - [ ] SRE: Observabilidade da aplicação: Métricas e Monitoramento.
 
 
+## ⚙️ Documentação
+
+![----_-Em Construção  ](https://user-images.githubusercontent.com/87483916/224585025-2396fe38-40fa-4b2d-8a44-3d9b753f88d0.svg)
+
 
 ## ⚙️ Executando os testes
 
