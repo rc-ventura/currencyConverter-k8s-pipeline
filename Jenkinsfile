@@ -1,5 +1,7 @@
 pipeline {
     agent any
+      TAG_NAME = "${env.BRANCH_NAME}-${env.BUILD_NUMBER}"
+
     triggers {
         githubPush()
     }
@@ -7,7 +9,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                        dockerImage = docker.build("-f Dockerfile -t ${DOCKER_REGISTRY}/currency-converter-backend:v1.0.${env.BUILD_ID} .")
+                        dockerImage = docker.build("-f Dockerfile -t ${DOCKER_REGISTRY}/currency-converter-backend:${TAG_NAME} .")
                 }
             }
         }
@@ -15,7 +17,7 @@ pipeline {
             steps {
                 script {
                     docker.withRegistry("https://registry.hub.docker.com", "dockerhub-credentials") {
-                        dockerImage.push('v1.0.${env.BUILD_ID}')
+                        dockerImage.push('${TAG_NAME}')
                         dockerImage.push('latest')                    }
                 }
             }
