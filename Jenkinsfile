@@ -7,7 +7,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                        dockerImage = docker.build("-f Dockerfile -t ${DOCKER_REGISTRY}/currency-converter-backend:${env.BUILD_ID} .")
+                        dockerImage = docker.build("-f Dockerfile -t ${DOCKER_REGISTRY}/currency-converter-backend:v1.0.${env.BUILD_ID} .")
                 }
             }
         }
@@ -15,7 +15,7 @@ pipeline {
             steps {
                 script {
                     docker.withRegistry("https://registry.hub.docker.com", "dockerhub-credentials") {
-                        dockerImage.push('${env.BUILD_ID}')
+                        dockerImage.push('v1.0.${env.BUILD_ID}')
                         dockerImage.push('latest')                    }
                 }
             }
