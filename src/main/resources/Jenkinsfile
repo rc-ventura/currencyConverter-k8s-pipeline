@@ -6,7 +6,7 @@ pipeline {
         DOCKER_IMAGE_NAME = readFile('.env').trim()
     }
     triggers {
-        githubPush(credentialsId:)
+        githubPush()
     }
     stages {
         stage('Build Docker Image') {
