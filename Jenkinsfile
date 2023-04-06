@@ -1,7 +1,7 @@
 pipeline {
     agent any
         environment {
-        DOCKER_IMAGE_TAG  = "${env.BUILD_ID}"
+        DOCKER_IMAGE_TAG  = "${env.BUILD_NUMBER}"
     }
     triggers {
         githubPush()
@@ -18,8 +18,8 @@ pipeline {
             steps {
                 script {
                     docker.withRegistry("https://registry.hub.docker.com", "dockerhub-credentials") {
-                        dockerImage.push("${DOCKER_IMAGE_TAG}")
-                    }
+                        dockerImage.push("${DOCKER_REGISTRY}/currency-converter-backend:${DOCKER_IMAGE_TAG}")
+                        dockerImage.push("${DOCKER_REGISTRY}/currency-converter-backend:latest")                    }
                 }
             }
         }
