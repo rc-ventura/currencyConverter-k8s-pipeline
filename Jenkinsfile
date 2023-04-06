@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-      TAG_NAME = "${1.0.1}"
+      TAG_NAME = "1.0.1"
     }
     triggers {
         githubPush()
