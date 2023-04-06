@@ -20,16 +20,31 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.springframework.http.HttpStatus;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.server.ResponseStatusException;
 
 import com.oracle.next.one.Models.Transaction;
 import com.oracle.next.one.Repositories.TransactionRepository;
 import com.oracle.next.one.Services.TransactionService;
 
+import io.qameta.allure.AllureId;
+import io.qameta.allure.Description;
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Issue;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
+import io.qameta.allure.Story;
+import io.qameta.allure.TmsLink;
+
 	/**
 	 * Classe de teste para TransactionService.
 	 */
-	public class TransactionServiceTest {
+@Epic("Currency Conversion Tests")
+@Feature("Transaction Service")
+@Story("Transaction Management")
+@Transactional
+public class TransactionServiceTest {
 
 	    @Mock
 	    private TransactionRepository transactionRepository;
@@ -46,6 +61,11 @@ import com.oracle.next.one.Services.TransactionService;
 	     * Testa o método findAll() de TransactionService.
 	     */
 	    @Test
+	    @AllureId("1012")
+	    @Severity(SeverityLevel.NORMAL)
+	    @Description("Teste do método findAll() de TransactionService")
+	    @Story("Get all transactions")
+	    
 	    public void testFindAll() {
 	        // Cria lista de transações simulando dados do banco de dados.
 	        List<Transaction> transactions = new ArrayList<>();
@@ -69,6 +89,13 @@ import com.oracle.next.one.Services.TransactionService;
 	     * Testa o método findById() de TransactionService com um ID existente.
 	     */
 	    @Test
+	    @AllureId("1013")
+	    @Severity(SeverityLevel.CRITICAL)
+	    @Description("Teste do método findById() de TransactionService com um ID existente")
+	    @Story("Get transaction by ID")
+	    @Issue("NEXT-123")
+	    @TmsLink("NEXT-456")
+	    
 	    public void testFindByIdExistingId() {
 	        // Cria transação simulando dado do banco de dados.
 	        Transaction transaction = new Transaction("USD", "BRL", new BigDecimal(100.0), new BigDecimal(520.0), LocalDateTime.now());
