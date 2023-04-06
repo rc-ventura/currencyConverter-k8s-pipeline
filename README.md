@@ -4,7 +4,7 @@
 
 
 
-<img src= "./front/assets/currency_theme_white-trim.png" width="850" height="300" alt=" rosto de uma presidente americano em uma moeda">
+<img src= "./frontend/assets/currency_theme_white-trim.png" width="850" height="300" alt=" rosto de uma presidente americano em uma moeda">
 
 </div>
 
@@ -13,7 +13,7 @@
 Conversor de pares de moeda que faz uma consulta em uma API LAYER retorna o câmbio em tempo real e faz a conversão dos respectivos pares.
 
 
-## :anger: Status do Projeto
+## :smile: Status do Projeto
 
 ![→_-em desenvolvimento-green](https://user-images.githubusercontent.com/87483916/224333868-804e4712-ecb7-492b-8c47-6c6bff8e3b7a.svg)
 
@@ -115,13 +115,17 @@ https://user-images.githubusercontent.com/87483916/224570140-59ec3d15-2057-4b94-
  - [ ] Teste de integração de todas as features.
  - [ ] Teste de carga em transações no banco de dados. 
  - [ ] Teste de UI.
- - [ ] Documentação da API com Swagger.
+ - [ ] Documentação dos testes realizados.
+ - [x] Documentação da API com Swagger/OpenApi
  - [x] Deploy da aplicação em ambiente de teste com Docker.
  - [ ] Deploy da aplicação em ambiente de desenvolvimento em um servidor remoto.
- - [ ] Pipeline CI/CD: Build automatizado com Git Actions e imagem postada no DockerHub.
- - [ ] Pipeline CI/CD: Deploy automatizado com Ansible em um servidor remoto.
+ - [ ] Pipeline CI/CD
  - [ ] SRE: Observabilidade da aplicação: Métricas e Monitoramento.
 
+
+## :book: Documentação
+
+![----_-Em Construção  ](https://user-images.githubusercontent.com/87483916/224585025-2396fe38-40fa-4b2d-8a44-3d9b753f88d0.svg)
 
 
 ## ⚙️ Executando os testes
