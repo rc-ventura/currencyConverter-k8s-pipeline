@@ -1,7 +1,8 @@
 pipeline {
     agent any
+    environment {
       TAG_NAME = "${env.BRANCH_NAME}-${env.BUILD_NUMBER}"
-
+    }
     triggers {
         githubPush()
     }
