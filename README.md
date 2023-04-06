@@ -112,7 +112,7 @@ https://user-images.githubusercontent.com/87483916/224570140-59ec3d15-2057-4b94-
  - [x] Ajustes na UI.
  - [x] Feature: Método para salvar toda transação de conversão no banco de ddaos.
  - [x] Teste para método salvar toda transação no banco de dados.
- - [ ] Teste de integração de todas as features.
+ - [x] Teste de integração de todas as features.
  - [ ] Teste de carga em transações no banco de dados. 
  - [ ] Teste de UI.
  - [x] Documentação da API com Swagger/OpenApi.
