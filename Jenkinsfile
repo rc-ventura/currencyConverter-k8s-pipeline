@@ -18,8 +18,8 @@ pipeline {
             steps {
                 script {
                     docker.withRegistry("https://registry.hub.docker.com", "dockerhub-credentials") {
-                        dockerImage.push('${TAG_NAME}')
-                        dockerImage.push('latest')                    }
+                        dockerImage.push('${DOCKER_REGISTRY}/currency-converter-backend:${TAG_NAME}')
+                        dockerImage.push('${DOCKER_REGISTRY}/currency-converter-backend:latest')                    }
                 }
             }
         }
