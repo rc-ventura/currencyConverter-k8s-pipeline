@@ -2,8 +2,6 @@ pipeline {
     agent any
     environment {
         DOCKER_IMAGE_TAG  = "${env.BUILD_ID}"
-        DOCKER_REGISTRY = readFile('.env').trim()
-        DOCKER_IMAGE_NAME = readFile('.env').trim()
     }
     triggers {
         githubPush()
