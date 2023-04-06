@@ -10,7 +10,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                    docker.build("${DOCKER_REGISTRY}/currency-converter-backend:${DOCKER_IMAGE_TAG}", ".")
+                    docker.build("${DOCKER_REGISTRY}/currency-converter-backend:${DOCKER_IMAGE_TAG}", "-f Dockerfile .")
                 }
             }
         }
