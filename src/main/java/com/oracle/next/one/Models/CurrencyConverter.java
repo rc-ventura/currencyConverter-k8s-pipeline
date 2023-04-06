@@ -85,23 +85,17 @@ public class CurrencyConverter {
 	* @return um objeto URI contendo a URL completa com parâmetros de consulta adicionados
 	*/
 	
-<<<<<<< HEAD
-	
-	public BigDecimal convert(
 			
+				
+
+	public BigDecimal convert(
 			@Parameter(description = "Moeda de origem", required = true, schema = @Schema(type = "string", example = "USD"))
 			Currency from,
 			@Parameter(description = "Moeda de destino", required = true, schema = @Schema(type = "string", example = "BRL"))
 			Currency to,
 			@Parameter(description = "Valor a ser convertido", required = true, schema = @Schema(type = "number", example = "100.00"))
 			BigDecimal amount) {
-			
-try  {
-				
-=======
-	public BigDecimal convert(Currency from, Currency to, BigDecimal amount) {
 	 try {
->>>>>>> c466e88ba819e8cf175840320dde08f0023db04d
 		   URI uri = UriComponentsBuilder.fromUriString(API_URL)
 	            .queryParam("from", from.getCurrencyCode())
 	            .queryParam("to", to.getCurrencyCode())
@@ -113,7 +107,7 @@ try  {
 		 	ConversionResponse response = restTemplate.getForObject(uri, ConversionResponse.class);
 		 	System.out.println(response.getResult());
 		 	return response.getResult();
-	}catch(RestClientException e) {
+	}catch(Exception e) {
 		throw new RuntimeException("Failed to convert currency", e);
 	}
 	}

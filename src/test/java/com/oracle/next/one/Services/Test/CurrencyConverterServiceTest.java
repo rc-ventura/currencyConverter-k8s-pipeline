@@ -6,6 +6,7 @@ import java.math.BigDecimal;
 import java.util.Currency;
 
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
@@ -13,6 +14,17 @@ import org.mockito.MockitoAnnotations;
 import com.oracle.next.one.Models.CurrencyConverter;
 import com.oracle.next.one.Services.CurrencyConverterService;
 
+import io.qameta.allure.Description;
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Issue;
+import io.qameta.allure.Link;
+import io.qameta.allure.Owner;
+import io.qameta.allure.Story;
+
+@Epic("Currency Converter")
+@Feature("Currency Converter Service")
+@DisplayName("Currency Converter Service Tests")
 public class CurrencyConverterServiceTest {
 
     private CurrencyConverterService currencyConverterService;
@@ -27,6 +39,14 @@ public class CurrencyConverterServiceTest {
     }
 
     @Test
+    @Owner("John Doe")
+    @Feature("Currency Conversion")
+    @Story("Convert USD to BRL")
+    @DisplayName("Test Currency Conversion")
+    @Issue("JIRA-123")
+    @Link(name = "GitHub", type = "url", url = "https://github.com/my/repository")
+    @Description("Test the conversion of USD to BRL")
+    
     void testConvertCurrency() {
         Currency from = Currency.getInstance("USD");
         Currency to = Currency.getInstance("BRL");

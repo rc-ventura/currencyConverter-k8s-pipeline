@@ -8,15 +8,12 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.oracle.next.one.Models.CurrencyConverter;
-<<<<<<< HEAD
 
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.tags.Tag;
-=======
->>>>>>> c466e88ba819e8cf175840320dde08f0023db04d
 
 @Service
 @Transactional

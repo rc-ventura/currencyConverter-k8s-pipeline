@@ -15,9 +15,20 @@ import org.springframework.web.client.RestTemplate;
 
 import com.oracle.next.one.Models.CurrencyConverter;
 
+import io.qameta.allure.Description;
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Link;
+import io.qameta.allure.Story;
+import io.qameta.allure.TmsLink;
+
 /**
  * Classe de testes para a classe CurrencyConverter.
  */
+@Epic("Currency Conversion")
+@Feature("Conversion Rates")
+@Story("Test currency conversion for different currencies")
+
 class CurrencyConverterTest {
 
     /**
@@ -45,6 +56,10 @@ class CurrencyConverterTest {
      * Verifica se o resultado é um valor não nulo e positivo.
      */
     @Test
+    @Description("Test currency conversion for a given amount from one currency to another")
+    @Link(name = "API documentation", url = "https://api.apilayer.com/exchangerates_data/convert")
+    @TmsLink("TC001")
+    
     void testConvert() {
         Currency from = Currency.getInstance("BRL");
         Currency to = Currency.getInstance("USD");

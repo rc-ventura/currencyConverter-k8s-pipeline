@@ -27,4 +27,7 @@ mysql_data/
 #enviroment
 .env
 
+#Allure reports
+allure-results/
+
 
