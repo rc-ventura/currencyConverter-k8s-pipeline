@@ -13,7 +13,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                        def DATENOW = sh(script: 'TZ=America/New_York date +"%Y-%m-%d_%H-%M"', returnStdout: true).trim()
+                        def DATENOW = bat(script: 'TZ=America/New_York date +"%Y-%m-%d_%H-%M"', returnStdout: true).trim()
                         def TAG = "currency-converter-backend:${DATENOW}"
                         dockerImage = docker.build("-f Dockerfile -t ${DOCKER_REGISTRY}/${TAG}")
 
