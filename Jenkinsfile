@@ -13,9 +13,10 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                        def DATENOW = bat(script: 'TZ=America/New_York date +"%Y-%m-%d_%H-%M"', returnStdout: true).trim()
-                        def TAG = "currency-converter-backend:${DATENOW}"
-                        dockerImage = docker.build("-f Dockerfile -t ${DOCKER_REGISTRY}/${TAG}")
+                            def zone = ZoneId.of("America/Sao_Paulo")
+                            def DATENOW = LocalDateTime.now(zone).format(DateTimeFormatter.ofPattern("yyyy-MM-dd_HH-mm"))                   
+                            def TAG = "currency-converter-backend:${DATENOW}"
+                            dockerImage = docker.build("-f Dockerfile -t ${DOCKER_REGISTRY}/${TAG}")
 
                     
                 }
