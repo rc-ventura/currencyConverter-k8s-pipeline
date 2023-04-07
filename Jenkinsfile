@@ -13,7 +13,7 @@ pipeline {
             steps {
                 script {
                     docker.withRegistry("https://registry.hub.docker.com", "dockerhub-credentials") {
-                        def dockerImage = docker.build("${registry}/${image}:${tag}", "-f Dockerfile .")
+                        def dockerImage = docker.build("${registry}/${image}:${tag}",  ".")
                         dockerImage.push()
                     }
                 }
