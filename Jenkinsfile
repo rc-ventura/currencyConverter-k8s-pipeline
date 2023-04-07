@@ -1,3 +1,9 @@
+@Library('my-shared-library') _ // Importa uma biblioteca compartilhada
+
+import java.time.ZoneId
+import java.time.LocalDateTime
+import java.time.format.DateTimeFormatter
+
 pipeline {
     agent any
     
