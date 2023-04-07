@@ -1,4 +1,4 @@
-@Library('my-shared-library') _ // Importa uma biblioteca compartilhada
+@Library('my-shared-library')  // Importa uma biblioteca compartilhada
 
 import java.time.ZoneId
 import java.time.LocalDateTime
