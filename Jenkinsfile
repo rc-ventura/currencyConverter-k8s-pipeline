@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent any 
     triggers {
         githubPush()
     }
@@ -8,13 +8,15 @@ pipeline {
             environment {
                 registry = "rcventura"
                 image = "currency-converter-backend"
-                tag = "1.0.1"
+                dockerfile = "Dockerfile-backend"
             }
             steps {
                 script {
                     docker.withRegistry("https://registry.hub.docker.com", "dockerhub-credentials") {
-                        def dockerImage = docker.build("${registry}/${image}:${tag}",  ".")
-                        dockerImage.push()
+                        def customImage = docker.build ("${registry}/${image}:${env.BUILD_ID}", -f "${dockerfile}"  ".")
+                        customImage.push()
+
+                        customImage.push('latest')
                     }
                 }
             }
