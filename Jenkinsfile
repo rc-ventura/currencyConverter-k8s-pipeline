@@ -8,12 +8,12 @@ pipeline {
             environment {
                 registry = "rcventura"
                 image = "currency-converter-backend"
-                tag = "latest"
+                tag = "1.0.1"
             }
             steps {
                 script {
                     docker.withRegistry("https://registry.hub.docker.com", "dockerhub-credentials") {
-                        def dockerImage = docker.build("${registry}/${image}:${tag}", ".")
+                        def dockerImage = docker.build("${registry}/${image}:${tag}", "-f Dockerfile .")
                         dockerImage.push()
                     }
                 }
