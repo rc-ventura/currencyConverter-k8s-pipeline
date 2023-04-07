@@ -8,14 +8,14 @@ pipeline {
             environment {
                 registry = "rcventura"
                 image = "currency-converter-backend"
-                dockerfile = "Dockerfile-backend"
             }
             steps {
                 script {
                     docker.withRegistry("https://registry.hub.docker.com", "dockerhub-credentials") {
-                        def customImage = docker.build ("${registry}/${image}:${env.BUILD_ID}", "-f ${dockerfile}")
+                        def dockerfile = "Dockerfile-backend"
+                        def imageName = "${registry}/${image}:${env.BUILD_ID}"
+                        def customImage = docker.build (imageName, "-f ${dockerfile} .")
                         customImage.push()
-
                         customImage.push('latest')
                     }
                 }
