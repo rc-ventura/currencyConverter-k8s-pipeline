@@ -135,8 +135,8 @@
 		</dependency>
     </dependencies>
 
-    <build>
-    <plugins>
+ <build>
+     <plugins>
         <plugin>
             <groupId>io.qameta.allure</groupId>
             <artifactId>allure-maven</artifactId>
