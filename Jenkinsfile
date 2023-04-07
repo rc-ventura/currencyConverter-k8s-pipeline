@@ -13,7 +13,7 @@ pipeline {
             steps {
                 script {
                     docker.withRegistry("https://registry.hub.docker.com", "dockerhub-credentials") {
-                        def customImage = docker.build ("${registry}/${image}:${env.BUILD_ID}", "-f ${dockerfile}",  ".")
+                        def customImage = docker.build ("${registry}/${image}:${env.BUILD_ID}", "-f ${dockerfile},  .")
                         customImage.push()
 
                         customImage.push('latest')
