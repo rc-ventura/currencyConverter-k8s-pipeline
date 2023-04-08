@@ -11,7 +11,7 @@ pipeline {
             }
             steps {
                 script {
-                    docker.withRegistry("https://hub.docker.com/", "dockerhub-credentials") {
+                    docker.withRegistry("https://registry.hub.docker.com", "dockerhub-credentials") {
                         def dockerfile = "Dockerfile-backend"
                         def imageName = "${registry}/${image}:${env.BUILD_ID}"
                         def customImage = docker.build(imageName,"-f ${dockerfile} .")
