@@ -110,6 +110,7 @@
    			 <scope>test</scope>
 		</dependency>
 		
+		
 		<dependency>
 			<groupId>javax.validation</groupId>
 			<artifactId>validation-api</artifactId>
@@ -134,6 +135,12 @@
 				<scope>test</scope>
 		</dependency>
     </dependencies>
+    <repositories>
+   		 <repository>
+      		<id>allure</id>
+     		 <url>https://dl.bintray.com/qameta/maven/</url>
+    	  </repository>
+  	</repositories>
 
  <build>
      <plugins>
