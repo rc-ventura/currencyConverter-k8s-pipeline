@@ -18,7 +18,7 @@ pipeline {
             steps {
                 script {
                     def imageName = "${user_docker}/${image}:${env.BUILD_ID}"
-                    def customImage = docker.build(imageName,"-f ${dockerfile_backend}.")
+                    def customImage = docker.build(imageName,"-f ${dockerfile_backend} .")
                     customImage.push()
                     customImage.push('latest')
                 }
