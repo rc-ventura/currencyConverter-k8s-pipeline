@@ -8,15 +8,16 @@ pipeline {
         registry = credentials('dockerhub-credentials') 
         image = "currency-converter-backend"
         dockerfile_backend = "Dockerfile-backend"
+        user_docker = "rcventura"
     }
     triggers {
         githubPush()
     }
     stages {
-        stage('Build Docker Image') {
+        stage('Build e Push Docker Image') {
             steps {
                 script {
-                    def imageName = "${registry}/${image}:${env.BUILD_ID}"
+                    def imageName = "${user_docker}/${image}:${env.BUILD_ID}"
                     def customImage = docker.build(imageName,"-f ${dockerfile_backend}.")
                     customImage.push()
                     customImage.push('latest')
