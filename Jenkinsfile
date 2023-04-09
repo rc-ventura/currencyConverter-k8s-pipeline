@@ -1,10 +1,6 @@
 pipeline {
-    agent {
-         docker {
-            image 'ubuntu'
-            args '-v /var/run/docker.sock:/var/run/docker.sock'
-         }
-    }
+    agent any
+        
     options {
         buildDiscarder(logRotator(numToKeepStr: '5'))
     }
