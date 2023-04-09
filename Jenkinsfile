@@ -1,6 +1,5 @@
 pipeline {
     agent any
-        
     options {
         buildDiscarder(logRotator(numToKeepStr: '5'))
     }
@@ -26,7 +25,7 @@ pipeline {
         }
         stage("Run Tests"){
             steps {
-                sh 'mvn test -Dspring.profiles.active=dev' 
+                bat 'mvn test -Dspring.profiles.active=dev' 
             }
         }
     }
