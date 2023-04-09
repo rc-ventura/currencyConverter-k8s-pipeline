@@ -9,7 +9,7 @@ pipeline {
         buildDiscarder(logRotator(numToKeepStr: '5'))
     }
     environment {
-        registry = credentials('dockerhub-registry-url') // Use a Jenkins credential to store the Docker registry URL
+        registry = credentials('dockerhub-credentials') // Use a Jenkins credential to store the Docker registry URL
         image = "currency-converter-backend"
         dockerfile_backend = "Dockerfile-backend"
     }
