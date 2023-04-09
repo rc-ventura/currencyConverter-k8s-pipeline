@@ -2,7 +2,6 @@ pipeline {
     agent {
          docker {
             image 'ubuntu'
-            label 'docker'
             args '-v /var/run/docker.sock:/var/run/docker.sock'
          }
     }
