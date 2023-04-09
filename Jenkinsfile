@@ -11,7 +11,7 @@ pipeline {
     environment {
         registry = credentials('dockerhub-registry-url') // Use a Jenkins credential to store the Docker registry URL
         image = "currency-converter-backend"
-        dockerfile-backend = "Dockerfile-backend"
+        dockerfile_backend = "Dockerfile-backend"
     }
     triggers {
         githubPush()
@@ -21,7 +21,7 @@ pipeline {
             steps {
                 script {
                     def imageName = "${registry}/${image}:${env.BUILD_ID}"
-                    def customImage = docker.build(imageName,"-f ${dockerfile-backend}.")
+                    def customImage = docker.build(imageName,"-f ${dockerfile_backend}.")
                     customImage.push()
                     customImage.push('latest')
                 }
