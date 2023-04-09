@@ -1,8 +1,5 @@
 pipeline {
-    agent {
-        docker {
-            image 'ubuntu'
-        } 
+    agent any
         
     }
     options {
@@ -33,4 +30,4 @@ pipeline {
             }
         }
     }
-}
+
