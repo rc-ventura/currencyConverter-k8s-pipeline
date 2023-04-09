@@ -1,24 +1,35 @@
 pipeline {
-    agent any 
+    agent {
+        docker {
+            image 'ubuntu'
+        } 
+        
+    }
+    options {
+        buildDiscarder(logRotator(numToKeepStr: '5'))
+    }
+    environment {
+        registry = credentials('dockerhub-registry-url') // Use a Jenkins credential to store the Docker registry URL
+        image = "currency-converter-backend"
+        dockerfile-backend = "Dockerfile-backend"
+    }
     triggers {
         githubPush()
     }
     stages {
-        stage('Build and Push Docker Image') {
-            environment {
-                registry = "rcventura"
-                image = "currency-converter-backend"
-            }
+        stage('Build Docker Image') {
             steps {
                 script {
-                    docker.withRegistry("https://registry.hub.docker.com", "dockerhub-credentials") {
-                        def dockerfile = "Dockerfile-backend"
-                        def imageName = "${registry}/${image}:${env.BUILD_ID}"
-                        def customImage = docker.build(imageName,"-f ${dockerfile} .")
-                        customImage.push()
-                        customImage.push('latest')
-                    }
+                    def imageName = "${registry}/${image}:${env.BUILD_ID}"
+                    def customImage = docker.build(imageName,"-f ${dockerfile-backend}.")
+                    customImage.push()
+                    customImage.push('latest')
                 }
+            }
+        }
+        stage("Run Tests"){
+            steps {
+                sh 'mvn test -Dspring.profiles.active=dev' // Use the sh command instead of bat for cross-platform compatibility
             }
         }
     }

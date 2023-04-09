@@ -41,14 +41,12 @@
             <artifactId>rest-assured</artifactId>
             <scope>test</scope>
         </dependency>
-       <!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-junit4 -->
-<dependency>
-    <groupId>io.qameta.allure</groupId>
-    <artifactId>allure-junit4</artifactId>
-    <version>2.21.0</version>
-    <scope>test</scope>
-</dependency>
-
+		<dependency>
+    			<groupId>io.qameta.allure</groupId>
+    			<artifactId>allure-junit5</artifactId>
+    			<version>2.21.0</version>
+   				 <scope>test</scope>
+				</dependency>
         <dependency>
     		<groupId>org.mockito</groupId>
    			 <artifactId>mockito-core</artifactId>
@@ -118,44 +116,56 @@
         <dependency>
     		<groupId>org.junit.jupiter</groupId>
     		<artifactId>junit-jupiter-api</artifactId>
+    		   <version>5.9.2</version>
    			 <scope>test</scope>
-    	 </dependency>
-    	<dependency>
+    		 </dependency>
+    		<dependency>
     			<groupId>org.junit.jupiter</groupId>
     			<artifactId>junit-jupiter-engine</artifactId>
+    			    <version>5.9.2</version>
 				<scope>test</scope>
-		</dependency>
-   </dependencies>
+			</dependency>
+   		</dependencies>
  <build>
      <plugins>
-			<plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-surefire-plugin</artifactId>
-            <configuration>
+			 <plugin>
+				 <groupId>org.apache.maven.plugins</groupId>
+    			<artifactId>maven-surefire-plugin</artifactId>
+    				<version>2.22.2</version>
+                <configuration>
                 <testFailureIgnore>false</testFailureIgnore>
-                <argLine>
-                    -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
-                </argLine>
-                <properties>
-                    <property>
-                        <name>listener</name>
-                        <value>io.qameta.allure.junit4.AllureJunit4</value>
-                    </property>
-                </properties>
-            </configuration>
-            <dependencies>
-                <dependency>
-                    <groupId>org.aspectj</groupId>
-                    <artifactId>aspectjweaver</artifactId>
-                    <version>${aspectj.version}</version>
-                </dependency>
-            </dependencies>
-        </plugin>
-        <plugin>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-maven-plugin</artifactId>
-        </plugin>
+                        <argLine>
+                            -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
+                        </argLine>
+                    <systemProperties>
+                        <property>
+                            <name>junit.jupiter.extensions.autodetection.enabled</name>
+                            <value>true</value>
+                        </property>
+                    </systemProperties>
+                </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.junit.platform</groupId>
+                        <artifactId>junit-platform-surefire-provider</artifactId>
+                        <version>1.2.0</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.aspectj</groupId>
+                        <artifactId>aspectjweaver</artifactId>
+                        <version>${aspectj.version}</version>
+                    </dependency>
+            	  </dependencies>
+           
+            </plugin>
+            <plugin>
+                <groupId>io.qameta.allure</groupId>
+                <artifactId>allure-maven</artifactId>
+   					 <version>2.12.0</version>
+                <configuration>
+                    <reportVersion>2.4.1</reportVersion>
+                </configuration>
+            </plugin>
     </plugins>
 </build>
-
 </project>
