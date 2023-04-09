@@ -9,7 +9,7 @@ pipeline {
         buildDiscarder(logRotator(numToKeepStr: '5'))
     }
     environment {
-        registry = credentials('dockerhub-credentials') // Use a Jenkins credential to store the Docker registry URL
+        registry = credentials('dockerhub-credentials') 
         image = "currency-converter-backend"
         dockerfile_backend = "Dockerfile-backend"
     }
@@ -29,7 +29,7 @@ pipeline {
         }
         stage("Run Tests"){
             steps {
-                sh 'mvn test -Dspring.profiles.active=dev' // Use the sh command instead of bat for cross-platform compatibility
+                sh 'mvn test -Dspring.profiles.active=dev' 
             }
         }
     }
