@@ -166,9 +166,9 @@ https://user-images.githubusercontent.com/87483916/230924780-c11f1a06-e2d6-4cf1-
   * GET, UPDATE, GET/ID, DELETE/ID, SAVE
   <Br>
   
-<img src= "https://user-images.githubusercontent.com/87483916/230958891-d9ff3b4b-1f7f-43ef-96a4-fb72c2a47303.png" alt= "Imagem modificada" width="700"/>
+<img src= "https://user-images.githubusercontent.com/87483916/230958891-d9ff3b4b-1f7f-43ef-96a4-fb72c2a47303.png" alt= "Imagem modificada" width="600"/>
 
-<img src="https://user-images.githubusercontent.com/87483916/230958940-8f6d3e33-36f8-4244-a334-59429143a0a1.png" alt=" Imagem modificada" width="700"/>
+<img src="https://user-images.githubusercontent.com/87483916/230958940-8f6d3e33-36f8-4244-a334-59429143a0a1.png" alt=" Imagem modificada" width="600"/>
 
  ### :fast_forward: Testes Unitários
 
