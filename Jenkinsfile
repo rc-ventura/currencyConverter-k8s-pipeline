@@ -13,6 +13,18 @@ pipeline {
         githubPush()
     }
     stages {
+
+        stage('Build with Maven') {
+            steps {
+                bat 'mvn clean package'
+                }
+            }
+
+        stage("Run Tests"){
+            steps {
+                bat 'mvn clean test -Dspring.profiles.active=dev' 
+            }
+        }
         stage('Build e Push Docker Image') {
             steps {
                 script {
@@ -21,11 +33,6 @@ pipeline {
                     customImage.push()
                     customImage.push('latest')
                 }
-            }
-        }
-        stage("Run Tests"){
-            steps {
-                bat 'mvn test -Dspring.profiles.active=dev' 
             }
         }
     }
