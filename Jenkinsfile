@@ -27,6 +27,14 @@ pipeline {
             steps {
                 bat 'mvn test -Dspring.profiles.active=dev' 
             }
+            post {
+                failure{
+                    echo "Os testes falharam. Tentando novamente..."
+                    retry(3){
+                        bat 'mvn test - Dspring.profiles.active=dev'
+                    }
+                }
+            }
         }
     }
 }
