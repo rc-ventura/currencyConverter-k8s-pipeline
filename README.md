@@ -124,14 +124,58 @@ https://user-images.githubusercontent.com/87483916/224570140-59ec3d15-2057-4b94-
 
 
 ## :book: Documentação
+  
+##### <a href="https://swagger.io/specification/)" target="_blank"> Swagger/OpenAPI </a>
+  
+<img src="https://user-images.githubusercontent.com/87483916/230924283-b1cf026a-ca3d-4ad0-a721-d762791bc960.png" alt="documentacão Api swagger"/>
 
-![----_-Em Construção  ](https://user-images.githubusercontent.com/87483916/224585025-2396fe38-40fa-4b2d-8a44-3d9b753f88d0.svg)
 
+<div align="center">
 
+https://user-images.githubusercontent.com/87483916/230924780-c11f1a06-e2d6-4cf1-a6d8-3e75b8c24f01.mp4
+
+  </div>
+  
 ## ⚙️ Executando os testes
+<Br>
+  
+* Overview dos testes feitos em Junit, Mockito, Rest Assured
+<Br>
+   
+ <div  style="display: inline-block" >
 
- ![----_-Em Construção  ](https://user-images.githubusercontent.com/87483916/224585025-2396fe38-40fa-4b2d-8a44-3d9b753f88d0.svg)
+<img src="https://user-images.githubusercontent.com/87483916/230927490-7ff73c1c-cc32-4e4f-bf0c-e899d38d96d9.png" alt="Imagem modificada" width="700"/>
 
+<img src="https://user-images.githubusercontent.com/87483916/230928492-249e0adf-1f74-48d4-9b40-b95a67b7846b.png" alt="Imagem modificada" width="700"/>
+<Br>
+<Br>
+  
+  ### :fast_forward: Testes de Integração
+  <Hr>
+  
+   #### :o: shouldConvertCurrencyAndSaveTransaction
+   * Simula uma consulta na API externa. 
+   * Retorna com a taxa de conversão.
+   * Processa a conversão.
+   * Salva no banco de dados a transação. 
+  <Br>
+    
+  #### :o: Transaction Controller Feature
+  * Simula todos os endpoints da aplicação ao manipular uma transação
+  * Controller->Service->Repository
+  * GET, UPDATE, GET/ID, DELETE/ID, SAVE
+  <Br>
+  
+<img src= "https://user-images.githubusercontent.com/87483916/230958891-d9ff3b4b-1f7f-43ef-96a4-fb72c2a47303.png" alt= "Imagem modificada" width="700"/>
+
+<img src="https://user-images.githubusercontent.com/87483916/230958940-8f6d3e33-36f8-4244-a334-59429143a0a1.png" alt=" Imagem modificada" width="700"/>
+
+ ### :fast_forward: Testes Unitários
+
+
+</div>
+  
+  
 <!-- Explicar como executar os testes automatizados para este sistema.
 
 ### 🔩 Analise os testes de ponta a ponta
