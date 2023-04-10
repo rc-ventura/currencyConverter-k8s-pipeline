@@ -25,13 +25,13 @@ pipeline {
         }
         stage("Run Tests"){
             steps {
-                bat 'mvn test -Dspring.profiles.active=dev' 
+                bat 'mvn clean test -Dspring.profiles.active=dev' 
             }
             post {
                 failure{
                     echo "Os testes falharam. Tentando novamente..."
                     retry(3){
-                        bat 'mvn test - Dspring.profiles.active=dev'
+                        bat 'mvn clean test -Dspring.profiles.active=dev'
                     }
                 }
             }
