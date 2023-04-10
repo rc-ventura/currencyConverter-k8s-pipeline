@@ -159,6 +159,8 @@ https://user-images.githubusercontent.com/87483916/230924780-c11f1a06-e2d6-4cf1-
    * Processa a conversão.
    * Salva no banco de dados a transação. 
   <Br>
+ <img src= "https://user-images.githubusercontent.com/87483916/230958891-d9ff3b4b-1f7f-43ef-96a4-fb72c2a47303.png" alt= "Imagem modificada" width="800"/>
+
     
   #### :o: Transaction Controller Feature
   * Simula todos os endpoints da aplicação ao manipular uma transação
@@ -166,14 +168,41 @@ https://user-images.githubusercontent.com/87483916/230924780-c11f1a06-e2d6-4cf1-
   * GET, UPDATE, GET/ID, DELETE/ID, SAVE
   <Br>
   
-<img src= "https://user-images.githubusercontent.com/87483916/230958891-d9ff3b4b-1f7f-43ef-96a4-fb72c2a47303.png" alt= "Imagem modificada" width="800"/>
 
 <img src="https://user-images.githubusercontent.com/87483916/230958940-8f6d3e33-36f8-4244-a334-59429143a0a1.png" alt=" Imagem modificada" width="800"/>
 
+<Br>
+
  ### :fast_forward: Testes Unitários
+<Hr>
+ 
+ #### :o: CurrencyExceptionHandler
+ * Simula o controle de exceções
+  <Br>
+    
+  ![Sem título - Brave 10_04_2023 11_56_51](https://user-images.githubusercontent.com/87483916/230982651-7dbe2ae6-b3f4-4808-8c83-38cb4f8733d3.png)
 
-    k
+     
+ #### :o: Currency Conversion
+ * Simula uma conversão.
+ * Chama a API Externa
+ * Faz uma conversão do par USD para BRL.
+  <Br>
+    
+ ![Sem título - Brave 10_04_2023 11_54_53](https://user-images.githubusercontent.com/87483916/230982897-a2460374-df92-43b4-8a68-ae14140fe758.png)
 
+    
+<Br>
+    
+ #### :o: Transaction Service
+* Simula todas as manipulações de transações na camada de Serviços
+* Service->Repository
+    
+<Br>
+ 
+![Sem título - Brave 10_04_2023 11_55_35](https://user-images.githubusercontent.com/87483916/230983762-5092a75c-d24e-4d28-8d41-6b3ee1b71449.png)
+
+  
 </div>
   
   
