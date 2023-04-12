@@ -10,13 +10,13 @@ pipeline {
         dockerfile_backend = "Dockerfile-backend"
         dockerfile_frontend = "Dockerfile-frontend"
         user_docker = "rcventura"
-        MYSQL_ROOT_PASSWORD=Rafa81041683!
-        MYSQL_ROOT_HOST=%
-        MYSQL_DATABASE=currency-converterdb
-        MYSQL_USER=admindb
-        MYSQL_PASSWORD=Rafa81041683!!
-        MYSQL_HOST=localhost
-        MYSQL_PORT=3306
+        MYSQL_ROOT_PASSWORD="Rafa81041683!"
+        MYSQL_ROOT_HOST="%"
+        MYSQL_DATABASE="currency-converterdb"
+        MYSQL_USER="admindb"
+        MYSQL_PASSWORD="Rafa81041683!!"
+        MYSQL_HOST="localhost"
+        MYSQL_PORT="3306"
     }
     triggers {
         githubPush()
