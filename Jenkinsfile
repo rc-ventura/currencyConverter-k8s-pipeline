@@ -5,7 +5,8 @@ pipeline {
     }
     environment {
         registry = credentials('dockerhub-credentials') 
-        image = "currency-converter-backend"
+        image_backend = "currency-converter-backend"
+        image_frontend = "currency-converter-frontend"
         dockerfile_backend = "Dockerfile-backend"
         dockerfile_frontend = "Dockerfile-frontend"
         user_docker = "rcventura"
@@ -18,22 +19,22 @@ pipeline {
         stage('Build e Push Docker Image Backend') {
             steps {
                 script {
-                    def imageName = "${user_docker}/${image}:${env.BUILD_ID}"
-                    def customImage = docker.build(imageName,"-f ${dockerfile_backend} .")
+                    def imageBackend = "${user_docker}/${image_backend}:${env.BUILD_ID}"
+                    def backendCustom_image = docker.build(imageBackend,"-f ${dockerfile_backend} .")
                     
-                    customImage.push()
-                    customImage.push('latest')
+                    backendCustom_image.push()
+                    backendCustom_image.push('latest')
                 }
             }
         }
          stage('Build e Push Docker Image Frontend') {
             steps {
                 script {
-                    def imageName = "${user_docker}/${image}:${env.BUILD_ID}"
-                    def customImage = docker.build(imageName,"-f ${dockerfile_frontend} .")
+                    def imageFrontend = "${user_docker}/${image_frontend}:${env.BUILD_ID}"
+                    def frontendCustom_image = docker.build(imageFrontend,"-f ${dockerfile_frontend} .")
                     
-                    customImage.push()
-                    customImage.push('latest')
+                    frontendCustom_image.push()
+                    frontendCustom_image.push('latest')
                 }
             }
         }
