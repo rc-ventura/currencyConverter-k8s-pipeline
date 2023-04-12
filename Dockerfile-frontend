@@ -1,0 +1,11 @@
+# Usando a imagem do Nginx como base
+FROM nginx:1.20.2
+
+# Copiando o diretório frontend para o diretório /usr/share/nginx/html na imagem
+COPY ./frontend /usr/share/nginx/html
+
+# Expondo a porta 80 da imagem
+EXPOSE 80
+
+# Iniciando o servidor Nginx em primeiro plano quando a imagem é iniciada
+CMD ["nginx", "-g", "daemon off;"]
