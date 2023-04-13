@@ -114,12 +114,13 @@ https://user-images.githubusercontent.com/87483916/224570140-59ec3d15-2057-4b94-
  - [x] Teste para método salvar toda transação no banco de dados.
  - [x] Teste de integração de todas as features.
  - [ ] Teste de carga em transações no banco de dados. 
- - [ ] Teste de UI.
+ - [ ] Teste de UI com Selenium.
  - [x] Documentação da API com Swagger/OpenApi.
  - [x] Documentação com Testes com Allure Framework.
- - [ ] Deploy da aplicação em ambiente de teste com Docker play.
- - [ ] Deploy da aplicação em ambiente de desenvolvimento em um servidor remoto no Fly.io ou Aws.
- - [ ] Pipeline CI/CD com Jenkins
+ - [x] Deploy da aplicação em ambiente de teste com K3d da Ranch.
+ - [ ] Deploy da aplicação em ambiente de desenvolvimento em um servidor remoto na Digital Ocean.
+ - [x] Pipeline CI/CD com Jenkins em ambiente de teste.
+ - [ ] Pipeline CI/CD com Jenkins na Digital Ocean em produção.
  - [ ] SRE: Observabilidade da aplicação: Métricas e Monitoramento.
 
 
@@ -244,6 +245,10 @@ Dar exemplos
  <img src= "https://user-images.githubusercontent.com/87483916/224327989-cbe927a8-c35c-48e1-99e2-6baadec00d9b.svg" width="80">
  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" width="80">
  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg"  width="80" />
+ <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" width="80" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg" width="80" />
+ <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/digitalocean/digitalocean-original-wordmark.svg" width="80" />
+
 
  
 </div>
