@@ -30,4 +30,8 @@ mysql_data/
 #Allure reports
 allure-results/
 
+#terraform
+.terraform
+
+
 
