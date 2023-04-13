@@ -23,9 +23,9 @@ spec:
         - name: MYSQL_DATABASE
           value: "dbk8s"
         - name: MYSQL_USER 
-          value: "root"
+          value: "admindb"
         - name: MYSQL_PASSWORD 
-          value: "Rafa81041683!"   
+          value: "Rafa81041683!!"  
 ---
 apiVersion: v1
 kind: Service
@@ -63,10 +63,12 @@ spec:
           value: "mysql" 
         - name: MYSQL_PORT 
           value: "3306" 
+        - name: MYSQL_DATABASE
+          value: "dbk8s"
         - name: MYSQL_USER 
-          value: "root"
+          value: "admindb"
         - name: MYSQL_PASSWORD 
-          value: "Rafa81041683!"
+          value: "Rafa81041683!!"
            
 ---
 apiVersion: v1
