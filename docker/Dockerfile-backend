@@ -10,7 +10,7 @@ WORKDIR /app
 COPY pom.xml .
 
 # Executa o comando mvn install para baixar as dependências do projeto e gerar o arquivo .jar
-RUN apk add --no-cache maven && mvn dependency:go-offline -U
+RUN apk add  maven && mvn dependency:go-offline -U
 
 # Copia todos os arquivos do diretório atual para o diretório de trabalho
 COPY . .

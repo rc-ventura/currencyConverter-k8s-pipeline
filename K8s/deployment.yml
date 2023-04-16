@@ -55,7 +55,7 @@ spec:
     spec:
       containers:
       - name: backend-java 
-        image: rcventura/currency-converter-backend:latest 
+        image: rcventura/currency-converter-backend:{{TAG}} 
         ports:
         - containerPort: 8080 
         env:
@@ -81,3 +81,38 @@ spec:
   ports:
     - port: 8080
   type: ClusterIP
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend-js
+spec:
+  replicas: 3 
+  selector:
+    matchLabels:
+      app: frontend-js
+  template:
+    metadata:
+      labels:
+        app: frontend-js
+    spec:
+      containers:
+      - name: frontend-js
+        image: rcventura/currency-converter-frontend:{{TAG}} 
+        ports:
+        - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: frontend-js
+spec:
+  selector:
+    app: frontend-js
+  ports:
+    - port: 80
+  type: Loadbalancer
+
+---

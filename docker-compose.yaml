@@ -5,10 +5,12 @@ services:
 
   # Container com a aplicação Java (backend)
   backend:
-    image: currency-converter-backend
+    image: currency-converter-backend:v1.0
+    env_file:
+     - variables.env
     build: 
       context:  .
-      dockerfile: Dockerfile-backend
+      dockerfile: /docker/Dockerfile-backend
     
     restart: always
 
@@ -42,19 +44,19 @@ services:
     command: --default-authentication-plugin=mysql_native_password 
 
 
-    environment:
+    #environment:
       
       # Define a url da conexão com o banco de dados
-      SPRING_DATASOURCE_URL: ${SPRING_DATASOURCE_URL}
+      #SPRING_DATASOURCE_URL: ${SPRING_DATASOURCE_URL}
       # Define a senha do usuário root do MySQL
-      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      #MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
       # Define que o usuário ROOT pode acessar o db de uma rede local
-      MYSQL_ROOT_HOST: ${MYSQL_ROOT_HOST}
+      #MYSQL_ROOT_HOST: ${MYSQL_ROOT_HOST}
       # Define o nome da database
-      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      #MYSQL_DATABASE: ${MYSQL_DATABASE}
       # Define um usuário para acesso e sua senha
-      MYSQL_USER: ${MYSQL_USER}
-      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      #MYSQL_USER: ${MYSQL_USER}
+      #MYSQL_PASSWORD: ${MYSQL_PASSWORD}
       
     healthcheck: # Define um healthcheck para o serviço de banco de dados
       test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-pexample"] # Testa a conexão com o banco de dados usando mysqladmin
@@ -79,6 +81,12 @@ services:
 
   frontend:
     image: nginx:1.20.2
+    env_file:
+     - variables.env
+    build: 
+      context:  .
+      dockerfile: /docker/Dockerfile-frontend
+    
     ports:
       - "80:80"
     volumes:
