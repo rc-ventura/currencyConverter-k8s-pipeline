@@ -25,7 +25,7 @@ pipeline {
             steps {
                 script {
                     def imageFrontend = "${user_docker}/${image_frontend}:${env.BUILD_ID}"
-                    def frontendCustom_image = docker.build(imageFrontend, '-f ./docker/dockerfile-frontend .')
+                    def frontendCustom_image = docker.build(imageFrontend, '-f ./docker/Dockerfile-frontend .')
 
                     docker.withRegistry('https://registry.hub.docker.com', 'dockerhub-credentials'){
                     frontendCustom_image.push("${env.BUILD_ID}")
