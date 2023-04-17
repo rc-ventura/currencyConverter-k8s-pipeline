@@ -14,9 +14,10 @@ pipeline {
                     def imageBackend = "${user_docker}/${image_backend}:${env.BUILD_ID}"
                     def backendCustom_image = docker.build(imageBackend, '-f ./docker/Dockerfile-backend .')
 
-                    docker.withRegistry('https://registry.hub.docker.com', 'dockerhub-credentials')
-                    backendCustom_image.push(${env.BUILD_ID})
+                    docker.withRegistry('https://registry.hub.docker.com', 'dockerhub-credentials') { 
+                    backendCustom_image.push("${env.BUILD_ID}")
                     backendCustom_image.push('latest')
+                    }
                 }
             }
         }
@@ -26,9 +27,10 @@ pipeline {
                     def imageFrontend = "${user_docker}/${image_frontend}:${env.BUILD_ID}"
                     def frontendCustom_image = docker.build(imageFrontend, '-f ./docker/dockerfile-frontend .')
 
-                    docker.withRegistry('https://registry.hub.docker.com', 'dockerhub-credentials')
-                    frontendCustom_image.push(${env.BUILD_ID})
+                    docker.withRegistry('https://registry.hub.docker.com', 'dockerhub-credentials'){
+                    frontendCustom_image.push("${env.BUILD_ID}")
                     frontendCustom_image.push('latest')
+                    }
                 }
             }
         }
@@ -49,6 +51,6 @@ pipeline {
                     }
                 }
             }
-            }
-            }
-          }
+        }
+    }
+}
