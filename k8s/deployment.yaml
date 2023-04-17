@@ -113,6 +113,6 @@ spec:
     app: frontend-js
   ports:
     - port: 80
-  type: Loadbalancer
+  type: LoadBalancer
 
 ---
