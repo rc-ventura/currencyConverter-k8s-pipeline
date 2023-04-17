@@ -1,0 +1,56 @@
+pipeline {
+    agent any
+
+    environment {
+        image_backend = 'currency-converter-backend'
+        image_frontend = 'currency-converter-frontend'
+        user_docker = 'rcventura'
+    }
+
+    stages {
+        stage('Build e Push Docker Image Backend') {
+            steps {
+                script {
+                    def imageBackend = "${user_docker}/${image_backend}:${env.BUILD_ID}"
+                    def backendCustom_image = docker.build(imageBackend, '-f ./docker/Dockerfile-backend .')
+
+                    docker.withRegistry('https://registry.hub.docker.com', 'dockerhub-credentials') { 
+                    backendCustom_image.push("${env.BUILD_ID}")
+                    backendCustom_image.push('latest')
+                    }
+                }
+            }
+        }
+        stage('Build e Push Docker Image Frontend') {
+            steps {
+                script {
+                    def imageFrontend = "${user_docker}/${image_frontend}:${env.BUILD_ID}"
+                    def frontendCustom_image = docker.build(imageFrontend, '-f ./docker/Dockerfile-frontend .')
+
+                    docker.withRegistry('https://registry.hub.docker.com', 'dockerhub-credentials'){
+                    frontendCustom_image.push("${env.BUILD_ID}")
+                    frontendCustom_image.push('latest')
+                    }
+                }
+            }
+        }
+        //stage("Run Tests Backend"){
+          //  steps {
+            //    retry(3){
+              //  bat 'mvn clean test -Dspring.profiles.active=dev'
+
+            stage('Deploy Kubernetes') {
+                environment {
+                    tag_version = "${env.BUILD_ID}"
+                }
+            steps {
+                script {
+                    withKubeConfig([credentialsId: 'kubeconfig-credentials']) {
+                        sh 'sed -i "s/{{TAG}}/$tag_version/g" ./k8s/deployment.yaml'
+                        sh 'kubectl apply -f ./k8s/deployment.yaml'
+                    }
+                }
+            }
+        }
+    }
+}

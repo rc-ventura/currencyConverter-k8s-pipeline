@@ -25,13 +25,16 @@ bin/
 mysql_data/
 
 #enviroment
-.env
+*.env
 
 #Allure reports
 allure-results/
 
 #terraform
 .terraform
+terraform.*
+
+
 
 
 
