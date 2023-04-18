@@ -12,7 +12,12 @@
 
 Conversor de pares de moeda que faz uma consulta em uma API LAYER retorna o câmbio em tempo real e faz a conversão dos respectivos pares.
 
+<div align="center">
 
+  <img  src=  "https://user-images.githubusercontent.com/87483916/232828544-c7af4a6d-8670-4616-a5bc-7ea078acdab2.png " width="1000" alt= "esquema do design da aplicação"/>
+  
+</div>
+ 
 ## :smile: Status do Projeto
 
 ![→_-em desenvolvimento-green](https://user-images.githubusercontent.com/87483916/224333868-804e4712-ecb7-492b-8c47-6c6bff8e3b7a.svg)
@@ -118,10 +123,10 @@ https://user-images.githubusercontent.com/87483916/224570140-59ec3d15-2057-4b94-
  - [x] Documentação da API com Swagger/OpenApi.
  - [x] Documentação com Testes com Allure Framework.
  - [x] Deploy da aplicação em ambiente de teste com K3d da Ranch.
- - [ ] Deploy da aplicação em ambiente de desenvolvimento em um servidor remoto na Digital Ocean.
+ - [x] Deploy da aplicação em ambiente de desenvolvimento em um servidor remoto na Digital Ocean.
  - [x] Pipeline CI/CD com Jenkins em ambiente de teste.
- - [ ] Pipeline CI/CD com Jenkins na Digital Ocean em produção.
- - [ ] SRE: Observabilidade da aplicação: Métricas e Monitoramento.
+ - [x] Pipeline CI/CD com Jenkins na Digital Ocean em produção.
+ - [ ] SRE: Observabilidade da aplicação com Prometheus e Grafana Métricas.
 
 
 ## :book: Documentação
