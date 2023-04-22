@@ -9,6 +9,10 @@ spec:
       app: mysql
   template:
     metadata:
+      annotations:
+          prometheus.io/scrape: "true"
+          prometheus.io/patch: /metrics
+          prometheus.io/port: "3306"
       labels:
         app: mysql
     spec:
@@ -50,6 +54,10 @@ spec:
       app: backend-java
   template:
     metadata:
+      annotations:
+          prometheus.io/scrape: "true"
+          prometheus.io/patch: /metrics
+          prometheus.io/port: "8080"
       labels:
         app: backend-java
     spec:
@@ -95,6 +103,10 @@ spec:
       app: frontend-js
   template:
     metadata:
+      annotations:
+          prometheus.io/scrape: "true"
+          prometheus.io/patch: /metrics
+          prometheus.io/port: "80"
       labels:
         app: frontend-js
     spec:
