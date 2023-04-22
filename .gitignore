@@ -38,3 +38,4 @@ terraform.*
 
 
 
+terraform/kube_config.yaml
