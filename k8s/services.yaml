@@ -2,7 +2,6 @@ apiVersion: monitoring.coreos.com/v1
 kind: ServiceMonitor
 metadata:
   name: backend-service-monitor
-  namespace: monitoring
   labels:
     app: backend-java
 spec:
@@ -18,7 +17,6 @@ apiVersion: monitoring.coreos.com/v1
 kind: ServiceMonitor
 metadata:
   name: frontend-service-monitor
-  namespace: monitoring
   labels:
     app: frontend-js
 spec:
@@ -34,7 +32,6 @@ apiVersion: monitoring.coreos.com/v1
 kind: ServiceMonitor
 metadata:
   name: mysql-service-monitor
-  namespace: monitoring
   labels:
     app: mysql
 spec:
