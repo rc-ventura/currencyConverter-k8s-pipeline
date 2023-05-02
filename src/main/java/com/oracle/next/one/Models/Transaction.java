@@ -1,4 +1,4 @@
-package com.oracle.next.one.Models;
+package com.oracle.next.one.models;
 
 
 import java.io.Serializable;

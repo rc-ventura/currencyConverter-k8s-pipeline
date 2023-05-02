@@ -20,7 +20,7 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 
-import com.oracle.next.one.Models.CurrencyConverter;
+import com.oracle.next.one.models.CurrencyConverter;
 
 import io.qameta.allure.Allure;
 import io.qameta.allure.Description;

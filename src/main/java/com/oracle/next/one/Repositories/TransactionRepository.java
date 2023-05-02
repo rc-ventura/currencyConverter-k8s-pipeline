@@ -3,7 +3,7 @@ package com.oracle.next.one.Repositories;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.oracle.next.one.Models.Transaction;
+import com.oracle.next.one.models.Transaction;
 
 @Repository
 public interface TransactionRepository extends JpaRepository< Transaction,Long> {
