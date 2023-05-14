@@ -118,7 +118,7 @@ https://user-images.githubusercontent.com/87483916/224570140-59ec3d15-2057-4b94-
  - [x] Documentação da API com Swagger/OpenApi.
  - [x] Documentação com Testes com Allure Framework.
  - [x] Deploy da aplicação em ambiente de teste com K3d da Ranch.
- - [ ] Automatização com Ansible da configuração do servidor remoto na Digital Ocean.
+ - [ ] Automatização com Terraform a configuração do servidor remoto na Digital Ocean.
  - [ ] Deploy da aplicação em ambiente de desenvolvimento em um servidor remoto na Digital Ocean com Kubernetes.
  - [x] Pipeline CI/CD com Jenkins em ambiente de desenvolvimento.
  - [ ] Pipeline CI/CD com Jenkins na Digital Ocean em produção.
@@ -233,8 +233,11 @@ Dar exemplos
 -->
 ## 📦 Implantação
   
-![----_-Em Construção  ](https://user-images.githubusercontent.com/87483916/224585085-61045e0a-cbe7-48cb-b29a-e6a89c4cf4e7.svg)
-
+<Br>
+ 
+  ![Deploy-Currency-Converter drawio](https://github.com/rc-ventura/CurrencyConverter_CI-CD-K3D/assets/87483916/6500edaf-70b0-4691-b16b-78fba449fcf6)
+  
+<Br>
 
 ## 🛠️ Tecnologias
 
