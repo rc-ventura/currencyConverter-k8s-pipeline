@@ -232,8 +232,12 @@ Dar exemplos
 -->
 ## 📦 Implantação
   
-![----_-Em Construção  ](https://user-images.githubusercontent.com/87483916/224585085-61045e0a-cbe7-48cb-b29a-e6a89c4cf4e7.svg)
+<Br>
+  
+  ![Deploy-Currency-Converter drawio](https://github.com/rc-ventura/CurrencyConverter_CI-CD-K3D/assets/87483916/9fc18dc2-98e9-477f-aaee-cdc1381db043)
 
+  
+<Br>
 
 ## 🛠️ Tecnologias
 
