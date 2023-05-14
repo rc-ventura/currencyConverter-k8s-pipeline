@@ -106,7 +106,7 @@ https://user-images.githubusercontent.com/87483916/224570140-59ec3d15-2057-4b94-
 
 
 ## :airplane: Roadmap
-
+ 
  - [x] Main Feature: Método para conversão de pares de moeda. 
  - [x] Feature: Interface do usuário em Html/Css.
  - [x] Feature: Link entre backend e frontend com JQuery.
@@ -124,10 +124,13 @@ https://user-images.githubusercontent.com/87483916/224570140-59ec3d15-2057-4b94-
  - [x] Documentação com Testes com Allure Framework.
  - [x] Deploy da aplicação em ambiente de teste com K3d da Ranch.
  - [ ] Automatização com Terraform a configuração do servidor remoto na Digital Ocean.
- - [x] Deploy da aplicação em ambiente de desenvolvimento em um servidor remoto na Digital Ocean.
- - [x] Pipeline CI/CD com Jenkins em ambiente de teste.
- - [x] Pipeline CI/CD com Jenkins na Digital Ocean em produção.
- - [ ] SRE: Observabilidade da aplicação com Prometheus e Grafana Métricas.
+ - [ ] Deploy da aplicação em ambiente de desenvolvimento em um servidor remoto na Digital Ocean com Kubernetes.
+ - [x] Pipeline CI/CD com Jenkins em ambiente de desenvolvimento.
+ - [ ] Pipeline CI/CD com Jenkins na Digital Ocean em produção.
+ - [x] SRE: Observabilidade da aplicação: Métricas com Micrometer
+ - [x] SRE: Observabilidade da aplicação: Monitoramento com o Prometheus
+ - [x] SRE: Observabilidade da aplicação: Dashboards com o Grafana.
+
 
 
 ## :book: Documentação
