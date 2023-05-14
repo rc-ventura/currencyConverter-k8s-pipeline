@@ -123,6 +123,7 @@ https://user-images.githubusercontent.com/87483916/224570140-59ec3d15-2057-4b94-
  - [x] Documentação da API com Swagger/OpenApi.
  - [x] Documentação com Testes com Allure Framework.
  - [x] Deploy da aplicação em ambiente de teste com K3d da Ranch.
+ - [ ] Automatização com Terraform a configuração do servidor remoto na Digital Ocean.
  - [x] Deploy da aplicação em ambiente de desenvolvimento em um servidor remoto na Digital Ocean.
  - [x] Pipeline CI/CD com Jenkins em ambiente de teste.
  - [x] Pipeline CI/CD com Jenkins na Digital Ocean em produção.
