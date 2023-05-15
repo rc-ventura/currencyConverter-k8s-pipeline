@@ -1,4 +1,4 @@
-package com.oracle.next.one.Controllers;
+package com.oracle.next.one.controllers;
 
 import java.util.List;
 
@@ -14,8 +14,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.oracle.next.one.Models.Transaction;
 import com.oracle.next.one.Services.TransactionService;
+import com.oracle.next.one.models.Transaction;
 
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;

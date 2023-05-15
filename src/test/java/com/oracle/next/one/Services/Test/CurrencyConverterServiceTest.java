@@ -11,8 +11,8 @@ import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
-import com.oracle.next.one.Models.CurrencyConverter;
 import com.oracle.next.one.Services.CurrencyConverterService;
+import com.oracle.next.one.models.CurrencyConverter;
 
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;

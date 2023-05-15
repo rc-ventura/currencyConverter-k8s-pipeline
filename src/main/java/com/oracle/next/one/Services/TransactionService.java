@@ -10,8 +10,8 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.server.ResponseStatusException;
 
-import com.oracle.next.one.Models.Transaction;
 import com.oracle.next.one.Repositories.TransactionRepository;
+import com.oracle.next.one.models.Transaction;
 
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
@@ -143,6 +143,10 @@ public class TransactionService {
 		public Transaction save( Transaction transaction) {
 			return transactionRepository.save(transaction);
 		}
+		
+		public long countTransactions() {
+	        return transactionRepository.count();
+	    }
 				
 }
 

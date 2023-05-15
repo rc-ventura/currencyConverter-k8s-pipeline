@@ -1,4 +1,4 @@
-package com.oracle.next.one.Config;
+package com.oracle.next.one.config;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
@@ -9,8 +9,8 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 
-import com.oracle.next.one.Models.Transaction;
 import com.oracle.next.one.Repositories.TransactionRepository;
+import com.oracle.next.one.models.Transaction;
 
 @Configuration
 @Profile("test")

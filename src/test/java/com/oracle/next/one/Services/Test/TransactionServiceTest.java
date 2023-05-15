@@ -23,9 +23,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.server.ResponseStatusException;
 
-import com.oracle.next.one.Models.Transaction;
 import com.oracle.next.one.Repositories.TransactionRepository;
 import com.oracle.next.one.Services.TransactionService;
+import com.oracle.next.one.models.Transaction;
 
 import io.qameta.allure.AllureId;
 import io.qameta.allure.Description;

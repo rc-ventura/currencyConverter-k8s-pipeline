@@ -20,7 +20,7 @@ import org.junit.jupiter.api.TestInstance;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.server.LocalServerPort;
 
-import com.oracle.next.one.Models.Transaction;
+import com.oracle.next.one.models.Transaction;
 
 import io.qameta.allure.Feature;
 import io.qameta.allure.Description;

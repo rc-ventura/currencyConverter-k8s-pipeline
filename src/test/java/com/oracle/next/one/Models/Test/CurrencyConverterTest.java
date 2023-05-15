@@ -13,7 +13,7 @@ import org.mockito.MockitoAnnotations;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.web.client.RestTemplate;
 
-import com.oracle.next.one.Models.CurrencyConverter;
+import com.oracle.next.one.models.CurrencyConverter;
 
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;

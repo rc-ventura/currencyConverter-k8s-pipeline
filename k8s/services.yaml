@@ -1,0 +1,44 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: backend-service-monitor
+  labels:
+    app: backend-java
+spec:
+  selector:
+    matchLabels:
+      app: backend-java
+  endpoints:
+  - port: "8080"
+    path: /metrics
+---
+
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: frontend-service-monitor
+  labels:
+    app: frontend-js
+spec:
+  selector:
+    matchLabels:
+      app: frontend-js
+  endpoints:
+  - port: "80"
+    path: /metrics
+---
+
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: mysql-service-monitor
+  labels:
+    app: mysql
+spec:
+  selector:
+    matchLabels:
+      app: mysql
+  endpoints:
+  - port: "3306"
+    path: /metrics
+---

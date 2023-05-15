@@ -38,3 +38,6 @@ terraform.*
 
 
 
+terraform/kube_config.yaml
+terraform/terraform.tfstate.backup
+terraform/terraform.tfstate

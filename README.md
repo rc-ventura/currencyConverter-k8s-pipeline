@@ -132,6 +132,9 @@ https://user-images.githubusercontent.com/87483916/224570140-59ec3d15-2057-4b94-
  - [x] SRE: Observabilidade da aplicação: Dashboards com o Grafana.
 
 
+ 
+=======
+
 
 ## :book: Documentação
   
@@ -237,6 +240,8 @@ Dar exemplos
 ## 📦 Implantação
   
 <Br>
+ 
+  ![Deploy-Currency-Converter drawio](https://github.com/rc-ventura/CurrencyConverter_CI-CD-K3D/assets/87483916/6500edaf-70b0-4691-b16b-78fba449fcf6)
   
   ![Deploy-Currency-Converter drawio](https://github.com/rc-ventura/CurrencyConverter_CI-CD-K3D/assets/87483916/9fc18dc2-98e9-477f-aaee-cdc1381db043)
 
@@ -268,10 +273,11 @@ Dar exemplos
  <img src="https://user-images.githubusercontent.com/87483916/235651471-f5d27c13-0881-4cde-8001-29ad237636fc.svg" width="80"/>
  <img src="https://user-images.githubusercontent.com/87483916/235651505-baebd218-b8eb-4452-89a4-1263ac864abe.svg" width="80"/>
 
-
- 
 </div>
-  
+
+
+
+
 ## 🖇️ Colaborando
 
 Por favor, leia o [COLABORACAO.md](https://gist.github.com/usuario/linkParaInfoSobreContribuicoes) para obter detalhes sobre o nosso código de conduta e o processo para nos enviar pedidos de solicitação.

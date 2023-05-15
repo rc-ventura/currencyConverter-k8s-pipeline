@@ -1,4 +1,4 @@
-package com.oracle.next.one.Security;
+package com.oracle.next.one.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

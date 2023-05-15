@@ -15,9 +15,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.oracle.next.one.Models.Transaction;
 import com.oracle.next.one.Repositories.TransactionRepository;
 import com.oracle.next.one.Services.CurrencyConverterService;
+import com.oracle.next.one.models.Transaction;
 
 import groovy.lang.Category;
 import io.qameta.allure.Allure;
