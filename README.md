@@ -12,7 +12,12 @@
 
 Conversor de pares de moeda que faz uma consulta em uma API LAYER retorna o câmbio em tempo real e faz a conversão dos respectivos pares.
 
+<div align="center">
 
+  <img  src=  "https://user-images.githubusercontent.com/87483916/232828544-c7af4a6d-8670-4616-a5bc-7ea078acdab2.png " width="1000" alt= "esquema do design da aplicação"/>
+  
+</div>
+ 
 ## :smile: Status do Projeto
 
 ![→_-em desenvolvimento-green](https://user-images.githubusercontent.com/87483916/224333868-804e4712-ecb7-492b-8c47-6c6bff8e3b7a.svg)
@@ -101,7 +106,7 @@ https://user-images.githubusercontent.com/87483916/224570140-59ec3d15-2057-4b94-
 
 
 ## :airplane: Roadmap
-
+ 
  - [x] Main Feature: Método para conversão de pares de moeda. 
  - [x] Feature: Interface do usuário em Html/Css.
  - [x] Feature: Link entre backend e frontend com JQuery.
@@ -128,6 +133,7 @@ https://user-images.githubusercontent.com/87483916/224570140-59ec3d15-2057-4b94-
 
 
  
+=======
 
 
 ## :book: Documentação
@@ -236,6 +242,9 @@ Dar exemplos
 <Br>
  
   ![Deploy-Currency-Converter drawio](https://github.com/rc-ventura/CurrencyConverter_CI-CD-K3D/assets/87483916/6500edaf-70b0-4691-b16b-78fba449fcf6)
+  
+  ![Deploy-Currency-Converter drawio](https://github.com/rc-ventura/CurrencyConverter_CI-CD-K3D/assets/87483916/9fc18dc2-98e9-477f-aaee-cdc1381db043)
+
   
 <Br>
 
