@@ -121,14 +121,14 @@ public class CurrencyConverter {
 			System.out.println(response.getResult());
 
 			// Incremente o contador de chamadas bem sucedidas
-		    metrics.myCounterSuccessCalls(prometheusRegistry).increment();
+		   // metrics.myCounterSuccessCalls(prometheusRegistry).increment();
 
 			return response.getResult();
 
 		} catch (Exception e) {
 
 			// Incrementa o contador de chamadas com erro
-			metrics.myCounterErrorCalls(prometheusRegistry).increment();
+			//metrics.myCounterErrorCalls(prometheusRegistry).increment();
 
 			throw new RuntimeException("Failed to convert currency", e);
 		}
