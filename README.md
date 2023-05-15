@@ -252,33 +252,30 @@ Dar exemplos
   
   #### :crystal_ball: DEVOPS
     
-     * Utilizando o Terraform provisiona uma infra-estrutura básica na  Digital Ocean.
-     * Criação de um cluster kubernetes com três serviços: backend, frontend e bancode dados
-     * Criação de 3 réplicas do backend e do frontend para escalonamento
-     * Criação de um load balancer aberto para internet que balanceia a carga para o frontend na porta 80 (http)
-     * Provisionamento de um máquina virtual (Droplet) para configurar a orquestração com o Jenkins.
-     * Criação do pipeline com o Jenkins CI utilizando o Docker e o DockerHub.
-     * Configuração d eum webhook no github para automatização do início do pipeline CI após um gitpush no repositório.
+  * Utilizando o Terraform provisiona uma infra-estrutura básica na  Digital Ocean.
+  * Criação de um cluster kubernetes com três serviços: backend, frontend e bancode dados
+  * Criação de 3 réplicas do backend e do frontend para escalonamento
+  * Criação de um load balancer aberto para internet que balanceia a carga para o frontend na porta 80 (http)
+  * Provisionamento de um máquina virtual (Droplet) para configurar a orquestração com o Jenkins.
+  * Criação do pipeline com o Jenkins CI utilizando o Docker e o DockerHub.
+  * Configuração d eum webhook no github para automatização do início do pipeline CI após um gitpush no repositório.
     
   #### :mag: SRE 
   
-    - Criação de observabilidade utlizando o Helm para configurar o cluster Kubernetes.
-    - Criação um load balancer aberto para requisições http na porta 80 e redirecionamento para a porta 9090 (prometheus) 
-    - Criação um load balancer aberto para requisições http na porta 80 e redirecionamento para 3000 (grafana).
-    - Criação dos dashboards das métricas funcionais e não funcionais da aplicação.
+ * Criação de observabilidade utlizando o Helm para configurar o cluster Kubernetes.
+ * Criação um load balancer aberto para requisições http na porta 80 e redirecionamento para a porta 9090 (prometheus) 
+ * Criação um load balancer aberto para requisições http na porta 80 e redirecionamento para 3000 (grafana).
+ * Criação dos dashboards das métricas funcionais e não funcionais da aplicação.
   
   #### :computer: DEV
   
-    - Promove alterações no código e ativa o trigger do pipeline.
-    - Manutenção e implementação dos testes unitários 
-    - Promove a cobertura do código nos testes.
+ * Promove alterações no código e ativa o trigger do pipeline.
+ * Manutenção e implementação dos testes unitários 
+ * Promove a cobertura do código nos testes.
   
 <Br>
 
-  <! --
-## Observabilidade
-  
-  -->
+
 
 ## 🛠️ Tecnologias
 
