@@ -123,8 +123,8 @@ https://user-images.githubusercontent.com/87483916/224570140-59ec3d15-2057-4b94-
  - [x] Documentação da API com Swagger/OpenApi.
  - [x] Documentação com Testes com Allure Framework.
  - [x] Deploy da aplicação em ambiente de teste com K3d da Ranch.
- - [ ] Automatização com Terraform a configuração do servidor remoto na Digital Ocean.
- - [ ] Deploy da aplicação em ambiente de desenvolvimento em um servidor remoto na Digital Ocean com Kubernetes.
+ - [x] Automatização com script de incialização com Terraform para o servidor remoto na Digital Ocean.
+ - [x] Deploy da aplicação em ambiente de desenvolvimento em um servidor remoto na Digital Ocean com Kubernetes.
  - [x] Pipeline CI/CD com Jenkins em ambiente de desenvolvimento.
  - [ ] Pipeline CI/CD com Jenkins na Digital Ocean em produção.
  - [x] SRE: Observabilidade da aplicação: Métricas com Micrometer
@@ -133,7 +133,6 @@ https://user-images.githubusercontent.com/87483916/224570140-59ec3d15-2057-4b94-
 
 
  
-=======
 
 
 ## :book: Documentação
@@ -237,16 +236,49 @@ Explique que eles verificam esses testes e porquê.
 Dar exemplos
 ```
 -->
+  
 ## 📦 Implantação
   
-<Br>
- 
-  ![Deploy-Currency-Converter drawio](https://github.com/rc-ventura/CurrencyConverter_CI-CD-K3D/assets/87483916/6500edaf-70b0-4691-b16b-78fba449fcf6)
+  <Br>
   
-  ![Deploy-Currency-Converter drawio](https://github.com/rc-ventura/CurrencyConverter_CI-CD-K3D/assets/87483916/9fc18dc2-98e9-477f-aaee-cdc1381db043)
+<div align="center">
+ 
+  ![Deploy-Currency-Converter drawio](https://github.com/rc-ventura/CurrencyConverter_CI-CD-K3D/assets/87483916/8ce8a791-f8fc-4e4d-8d05-8cc90a121330)
 
   
+</div> 
+  
+  <Br>
+  
+  #### :crystal_ball: DEVOPS
+    
+     * Utilizando o Terraform provisiona uma infra-estrutura básica na  Digital Ocean.
+     * Criação de um cluster kubernetes com três serviços: backend, frontend e bancode dados
+     * Criação de 3 réplicas do backend e do frontend para escalonamento
+     * Criação de um load balancer aberto para internet que balanceia a carga para o frontend na porta 80 (http)
+     * Provisionamento de um máquina virtual (Droplet) para configurar a orquestração com o Jenkins.
+     * Criação do pipeline com o Jenkins CI utilizando o Docker e o DockerHub.
+     * Configuração d eum webhook no github para automatização do início do pipeline CI após um gitpush no repositório.
+    
+  #### :mag: SRE 
+  
+    - Criação de observabilidade utlizando o Helm para configurar o cluster Kubernetes.
+    - Criação um load balancer aberto para requisições http na porta 80 e redirecionamento para a porta 9090 (prometheus) 
+    - Criação um load balancer aberto para requisições http na porta 80 e redirecionamento para 3000 (grafana).
+    - Criação dos dashboards das métricas funcionais e não funcionais da aplicação.
+  
+  #### :computer: DEV
+  
+    - Promove alterações no código e ativa o trigger do pipeline.
+    - Manutenção e implementação dos testes unitários 
+    - Promove a cobertura do código nos testes.
+  
 <Br>
+
+  <! --
+## Observabilidade
+  
+  -->
 
 ## 🛠️ Tecnologias
 
