@@ -118,10 +118,16 @@ https://user-images.githubusercontent.com/87483916/224570140-59ec3d15-2057-4b94-
  - [x] Documentação da API com Swagger/OpenApi.
  - [x] Documentação com Testes com Allure Framework.
  - [x] Deploy da aplicação em ambiente de teste com K3d da Ranch.
- - [ ] Deploy da aplicação em ambiente de desenvolvimento em um servidor remoto na Digital Ocean.
- - [x] Pipeline CI/CD com Jenkins em ambiente de teste.
+ - [ ] Automatização com Terraform a configuração do servidor remoto na Digital Ocean.
+ - [ ] Deploy da aplicação em ambiente de desenvolvimento em um servidor remoto na Digital Ocean com Kubernetes.
+ - [x] Pipeline CI/CD com Jenkins em ambiente de desenvolvimento.
  - [ ] Pipeline CI/CD com Jenkins na Digital Ocean em produção.
- - [ ] SRE: Observabilidade da aplicação: Métricas e Monitoramento.
+ - [x] SRE: Observabilidade da aplicação: Métricas com Micrometer
+ - [x] SRE: Observabilidade da aplicação: Monitoramento com o Prometheus
+ - [x] SRE: Observabilidade da aplicação: Dashboards com o Grafana.
+
+
+ 
 
 
 ## :book: Documentação
@@ -227,8 +233,11 @@ Dar exemplos
 -->
 ## 📦 Implantação
   
-![----_-Em Construção  ](https://user-images.githubusercontent.com/87483916/224585085-61045e0a-cbe7-48cb-b29a-e6a89c4cf4e7.svg)
-
+<Br>
+ 
+  ![Deploy-Currency-Converter drawio](https://github.com/rc-ventura/CurrencyConverter_CI-CD-K3D/assets/87483916/6500edaf-70b0-4691-b16b-78fba449fcf6)
+  
+<Br>
 
 ## 🛠️ Tecnologias
 
@@ -246,13 +255,20 @@ Dar exemplos
  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" width="80">
  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg"  width="80" />
  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" width="80" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg" width="80" />
+ <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg" width="80" />
  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/digitalocean/digitalocean-original-wordmark.svg" width="80" />
+ <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prometheus/prometheus-original.svg" width="80" />
+ <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/grafana/grafana-original.svg" width="80"/>
+ <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ansible/ansible-original.svg" width="80"/>
+ <img src="https://user-images.githubusercontent.com/87483916/235651549-6462c52d-2e71-4afc-9baa-e8bb05b1ddfb.png" width="80"/>
+ <img src="https://user-images.githubusercontent.com/87483916/235651471-f5d27c13-0881-4cde-8001-29ad237636fc.svg" width="80"/>
+ <img src="https://user-images.githubusercontent.com/87483916/235651505-baebd218-b8eb-4452-89a4-1263ac864abe.svg" width="80"/>
 
-
- 
 </div>
-  
+
+
+
+
 ## 🖇️ Colaborando
 
 Por favor, leia o [COLABORACAO.md](https://gist.github.com/usuario/linkParaInfoSobreContribuicoes) para obter detalhes sobre o nosso código de conduta e o processo para nos enviar pedidos de solicitação.
