@@ -27,17 +27,15 @@ mysql_data/
 #enviroment
 *.env
 
+#Kube
+./k8s/my-secret.yml
+
 #Allure reports
 allure-results/
 
 #terraform
 .terraform
 terraform.*
-
-
-
-
-
 terraform/kube_config.yaml
 terraform/terraform.tfstate.backup
 terraform/terraform.tfstate
