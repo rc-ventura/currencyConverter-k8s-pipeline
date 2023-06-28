@@ -15,22 +15,37 @@ spec:
           prometheus.io/scrape: "true"
           prometheus.io/patch: /metrics
           prometheus.io/port: "3306"
-      
     spec:
       containers:
       - name: mysql
         image: mysql:8.0.27 
+        resources:
+        limits:
+          cpu: "500m"
+          memory: "1Gi"
         ports:
         - containerPort: 3306 
         env:
         - name: MYSQL_ROOT_PASSWORD 
-          value: "Rafa81041683!"
+          valueFrom:
+                secretKeyRef:
+                  name: my-secret
+                  key: db_root_password                
         - name: MYSQL_DATABASE
-          value: "dbk8s"
+          valueFrom:
+                secretKeyRef:
+                  name: my-secret
+                  key: db                   
         - name: MYSQL_USER 
-          value: "admindb"
+          valueFrom:
+                secretKeyRef:
+                  name: my-secret
+                  key: db_user                        
         - name: MYSQL_PASSWORD 
-          value: "Rafa81041683!!"  
+          valueFrom:
+                secretKeyRef:
+                  name: my-secret
+                  key: db_password                    
 ---
 apiVersion: v1
 kind: Service
@@ -43,7 +58,6 @@ spec:
     - port: 3306
   type: ClusterIP
 ---
-
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -65,19 +79,38 @@ spec:
       containers:
       - name: backend-java 
         image: rcventura/currency-converter-backend:{{TAG}} 
+        resources:
+        limits:
+          cpu: "500m"
+          memory: "1Gi"
         ports:
         - containerPort: 8080 
         env:
         - name: MYSQL_HOST 
-          value: "mysql" 
+          valueFrom:
+                secretKeyRef:
+                  name: my-secret
+                  key: host                
         - name: MYSQL_PORT 
-          value: "3306" 
+          valueFrom:
+                secretKeyRef:
+                  name: my-secret
+                  key: port                
         - name: MYSQL_DATABASE
-          value: "dbk8s"
+          valueFrom:
+                secretKeyRef:
+                  name: my-secret
+                  key: db                 
         - name: MYSQL_USER 
-          value: "admindb"
+          valueFrom:
+                secretKeyRef:
+                  name: my-secret
+                  key: db_user                
         - name: MYSQL_PASSWORD 
-          value: "Rafa81041683!!"
+          valueFrom:
+                secretKeyRef:
+                  name: my-secret
+                  key: db_password               
            
 ---
 apiVersion: v1
@@ -92,7 +125,6 @@ spec:
   type: ClusterIP
 
 ---
-
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -114,6 +146,10 @@ spec:
       containers:
       - name: frontend-js
         image: rcventura/currency-converter-frontend:{{TAG}} 
+        resources:
+        limits:
+          cpu: "500m"
+          memory: "1Gi"
         ports:
         - containerPort: 80
 ---
